@@ -1,0 +1,111 @@
+.pageContainer {
+  padding: 4rem 0;
+  min-height: 80vh;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pageHeader h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.pageHeader p {
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.institutesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.instituteRow {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.instituteRow:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .instituteRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contentArea {
+  padding: 2.5rem;
+}
+
+.mainInfo h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.tagline {
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--color-text-main);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.programsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.programPill {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.actionArea {
+  background: var(--color-background);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-left: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .actionArea {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+}
+
+.location {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}

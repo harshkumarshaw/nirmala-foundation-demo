@@ -1,0 +1,212 @@
+.container {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+.header {
+  margin-bottom: 4rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.backBtn {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.section {
+  margin-bottom: 8rem;
+}
+
+.sectionInfo {
+  margin-bottom: 2rem;
+}
+
+.sectionInfo h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* 1. Video Masking */
+.videoMaskContainer {
+  position: relative;
+  height: 60vh;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.maskOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  mix-blend-mode: screen; /* This makes the black parts transparent, showing the video through the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoMaskText {
+  font-size: 14vw;
+  font-weight: 900;
+  color: #000; /* Must be black to show video through it with screen blend */
+  font-family: var(--font-serif);
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+
+/* 2. Marquee */
+.marqueeWrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--color-primary);
+  color: white;
+  padding: 2rem 0;
+  border-radius: 12px;
+}
+
+.marqueeTrack {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.marqueeItem {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 4rem;
+  letter-spacing: 0.1em;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 3. Dynamic Gradients */
+.gradientContainer {
+  position: relative;
+  height: 50vh;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.movingGradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    #0F2A4A, /* Royal Blueish Navy */
+    #E63946, /* Vibrant Crimson/Orange */
+    #F4A261, /* Saffron */
+    #2A9D8F  /* Emerald */
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  z-index: 1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradientContent {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.gradientContent h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* 4. Sticky Panels */
+.stickyContainer {
+  position: relative;
+  /* Parent needs height to scroll through */
+  margin-top: 4rem;
+}
+
+.stickyPanel {
+  position: sticky;
+  top: 100px; /* Locks 100px from the top of the viewport */
+  height: 70vh;
+  border-radius: 24px;
+  padding: 4rem;
+  color: white;
+  margin-bottom: 2rem;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.stickyPanel h3 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.imgPlaceholder {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.panel1 {
+  background: #0F2A4A;
+  z-index: 1;
+}
+
+.panel2 {
+  background: #E63946;
+  z-index: 2;
+  top: 120px; /* Stack slightly lower */
+}
+
+.panel3 {
+  background: #2A9D8F;
+  z-index: 3;
+  top: 140px; /* Stack slightly lower */
+}

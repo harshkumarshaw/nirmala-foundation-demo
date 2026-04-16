@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Institute {
+  id          String    @id @default(uuid())
+  slug        String    @unique
+  name        String
+  tagline     String
+  description String
+  location    String
+  accreditation String
+  websiteUrl  String
+  programs    Program[]
+  highlights  Highlight[]
+}
+
+model Program {
+  id          String    @id @default(uuid())
+  name        String
+  duration    String
+  seats       String
+  instituteId String
+  institute   Institute @relation(fields: [instituteId], references: [id])
+}
+
+model Highlight {
+  id          String    @id @default(uuid())
+  text        String
+  instituteId String
+  institute   Institute @relation(fields: [instituteId], references: [id])
+}
+
+model Career {
+  id           String    @id @default(uuid())
+  title        String
+  type         String
+  essentialReq String // Stored as JSON string
+  desirableReq String // Stored as JSON string
+}

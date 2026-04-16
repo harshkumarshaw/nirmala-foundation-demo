@@ -1,0 +1,97 @@
+.pageContainer {
+  padding: 4rem 0;
+  min-height: 80vh;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.pageHeader h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.pageHeader p {
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.jobsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.jobCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-primary);
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .jobHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.jobHeader h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.jobTag {
+  background-color: var(--color-background);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.reqList {
+  margin-bottom: 1.5rem;
+}
+
+.reqList h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.reqList ul {
+  list-style: none;
+}
+
+.reqList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+.reqList li::before {
+  content: "•";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--color-text-muted);
+}

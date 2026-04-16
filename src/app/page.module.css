@@ -1,0 +1,438 @@
+.mainWrapper {
+  width: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* 1. Video Masking Hero */
+.heroSection {
+  position: relative;
+  height: 100vh;
+  background: var(--bg-main);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  filter: saturate(1.1) brightness(1.05);
+}
+
+.maskOverlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.heroContent {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: 13vw;
+  font-weight: 900;
+  color: var(--primary); 
+  margin: 0;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-top: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  padding: 0.75rem 2.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--glass-shadow);
+  display: inline-block;
+  border: 1px solid var(--glass-border);
+}
+
+/* 2. Marquee */
+.marqueeSection {
+  background: var(--primary);
+  padding: 2rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.marqueeTrack {
+  display: inline-block;
+  animation: marquee 40s linear infinite;
+  color: var(--text-on-dark);
+}
+
+.marqueeItem {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-right: 5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.marqueeItem span {
+  color: var(--accent);
+  margin: 0 1.5rem;
+  font-size: 1.8rem;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.aboutSection {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 10rem 0;
+  background: var(--bg-surface);
+  overflow: hidden;
+}
+
+.movingGradientBg {
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(15, 23, 42, 0.03) 0%,
+    rgba(217, 119, 6, 0.03) 30%,
+    rgba(15, 23, 42, 0) 70%
+  );
+  background-size: 200% 200%;
+  animation: bgPulse 20s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes bgPulse {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-5%, -5%) scale(1.1); }
+}
+
+.aboutGrid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.aboutText h2 {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  color: var(--color-primary);
+}
+
+.aboutText p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.collabBox {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 4rem;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.collabBox h3 {
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-serif);
+}
+
+.collabBox p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* 4. Sticky Parallax Divisions */
+.divisionsSection {
+  background: var(--color-background);
+  padding: 10vh 0 20vh 0;
+  position: relative;
+}
+
+.stickyParent {
+  position: relative;
+  padding: 0 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.stickyPanel {
+  position: sticky;
+  height: 85vh;
+  border-radius: var(--radius-lg);
+  margin-bottom: 5vh;
+  overflow: hidden;
+  box-shadow: 0 20px 80px rgba(15, 23, 42, 0.08);
+  display: flex;
+  background: var(--bg-surface);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panelImage {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.panelImage video, .panelImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.1) contrast(1.1);
+}
+
+.panelImageOverlay {
+  position: absolute;
+  top:0; left:0; width:100%; height:100%;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.4) 0%, transparent 60%);
+}
+
+.panelContent {
+  width: 50%;
+  padding: 6rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panelTag {
+  align-self: flex-start;
+  background: var(--accent);
+  color: white;
+  padding: 0.6rem 2.2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  font-size: 0.75rem;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+}
+
+.panelContent h2 {
+  font-family: var(--font-serif);
+  font-size: 4.8rem;
+  margin-bottom: 2.5rem;
+  line-height: 1;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+.institutesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-height: 45vh;
+  overflow-y: auto;
+  padding-right: 1.5rem;
+}
+
+.institutesList::-webkit-scrollbar { width: 4px; }
+.institutesList::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 4px; }
+
+.instituteRow {
+  background: var(--bg-main);
+  padding: 1.75rem 2.25rem;
+  border-radius: var(--radius-md);
+  border-left: 5px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+.instituteRow:hover {
+  transform: translateX(12px);
+  background: white;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.rowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rowHeader h4 {
+  font-size: 1.5rem;
+  font-family: var(--font-serif);
+  color: var(--primary) !important;
+  margin: 0;
+  font-weight: 700;
+}
+
+.navButton {
+  background: var(--primary) !important;
+  color: white !important;
+  border: none;
+  padding: 0.6rem 1.8rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.navButton:hover {
+  background: var(--accent) !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+}
+
+.programTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pTag {
+  font-size: 0.75rem;
+  background: rgba(0,0,0,0.05) !important;
+  color: var(--color-text) !important;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Panel Colors (Nirmala Foundation Branding Theme) */
+.panelMedical { background: #E8EDF2; top: 10vh; z-index: 10; color: #111; border: 1px solid rgba(0,0,0,0.05); }
+.panelNursing { background: #FCEFE9; top: 14vh; z-index: 20; color: #111; border: 1px solid rgba(0,0,0,0.05); }
+.panelManagement { background: #E5F0F5; top: 18vh; z-index: 30; color: #111; border: 1px solid rgba(0,0,0,0.05); }
+.panelPharmacy { background: #FFFFFF; top: 22vh; z-index: 40; color: #111; border: 1px solid rgba(0,0,0,0.1); }
+
+.panelMedical h2, .panelNursing h2, .panelManagement h2, .panelPharmacy h2 { color: var(--color-primary); }
+
+/* 5. Roadmap Section */
+.roadmapSection {
+  padding: 12rem 2rem;
+  background: var(--bg-surface);
+  position: relative;
+}
+
+.roadmapHeader {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 8rem auto;
+}
+
+.roadmapHeader h2 {
+  font-family: var(--font-serif);
+  font-size: 4.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.roadmapHeader span {
+  color: var(--accent);
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.roadmapGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.roadCard {
+  background: var(--bg-main);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: var(--radius-lg);
+  padding: 5rem 4rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.roadCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+  border-color: var(--accent);
+}
+
+.roadCard::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.roadCard h3 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
+  color: var(--primary);
+}
+
+.roadCard p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  z-index: 2;
+  position: relative;
+}

@@ -1,0 +1,61 @@
+{
+  "home": {
+    "hero_video": "https://www.youtube.com/watch?v=pAZNSN0C-o8",
+    "panels": {
+      "medical": "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+      "nursing": "https://cdn.pixabay.com/video/2020/09/13/49808-458438856_large.mp4",
+      "management": "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+      "pharmacy": "https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.mp4"
+    }
+  },
+  "hubs": {
+    "admissions_hero": "https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.mp4",
+    "contact_hero": "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4"
+  },
+  "institutes": {
+    "iihmahs": {
+      "video": "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+      "images": [
+        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200",
+        "https://images.unsplash.com/photo-1576091160399-112ba9d15819?auto=format&fit=crop&w=1200",
+        "https://images.unsplash.com/photo-1586773860418-d3b97976c669?auto=format&fit=crop&w=1200"
+      ]
+    },
+    "iipsr": {
+      "video": "https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.mp4",
+      "images": [
+        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200",
+        "https://images.unsplash.com/photo-1584362142249-160fa8698583?auto=format&fit=crop&w=1200",
+        "https://images.unsplash.com/photo-1582719508461-905ec9b51fa0?auto=format&fit=crop&w=1200"
+      ]
+    },
+    "ichfn": {
+      "video": "https://cdn.pixabay.com/video/2017/03/20/8449-209292163_large.mp4",
+      "images": [
+        "https://images.unsplash.com/photo-1584433144859-1ec3fd65675e?auto=format&fit=crop&w=1200"
+      ]
+    },
+    "iinr": {
+      "video": "https://cdn.pixabay.com/video/2020/09/13/49808-458438856_large.mp4",
+      "images": [
+        "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&w=1200",
+        "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1200",
+        "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200"
+      ]
+    },
+    "jmn": {
+      "video": "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+      "images": [
+        "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200"
+      ]
+    },
+    "ccnr": {
+      "video": "https://cdn.pixabay.com/video/2019/02/23/21617-319452308_large.mp4",
+      "images": []
+    },
+    "kgh": {
+      "video": "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+      "images": []
+    }
+  }
+}
