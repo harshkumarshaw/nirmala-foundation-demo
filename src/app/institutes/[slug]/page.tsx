@@ -210,8 +210,7 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
             </div>
             <div className={styles.accredDetail}>
                <p>Regulatory Body: <strong>{institute.affiliations[0]}</strong></p>
-               <p>Status: <span className={styles.statusGreen}>Approved / Verified</span></p>
-               <Link href="/about" className={styles.viewDocLink}>View Approval Documents</Link>
+               <p>Status: <span className={styles.statusGreen}>Approved</span></p>
             </div>
           </motion.div>
 

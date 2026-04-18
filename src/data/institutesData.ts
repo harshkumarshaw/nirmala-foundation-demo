@@ -117,12 +117,13 @@ const institutesDataRaw = [
     features: [
       "Advanced 605-Bedded Super-Specialty infrastructure",
       "7 Fully Modular OT, 40 ICU | 21 CCU | 6 NICU | 10 PICU",
-      "99.99% Surgical Success Rate",
+      "12,000+ surgeries performed annually",
       "Over 300+ OPD patients treated daily",
       "Integrated health management systems"
     ],
     videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
     images: [
+      "https://images.unsplash.com/photo-1587351021759-3e566b3db4f4?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1586773860418-d3b97976c669?auto=format",
       "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format"
     ]
@@ -133,10 +134,10 @@ const institutesDataRaw = [
     shortName: "IINR",
     established: "2016",
     location: "Kalyani, Nadia",
-    description: "The First NAAC Accredited Nursing College in West Bengal. Providing high-level B.Sc. and Post Basic Nursing programs in a dedicated 5-acre campus.",
+    description: "A premier nursing college in West Bengal (NAAC Accreditation Applied). Providing high-level B.Sc. and Post Basic Nursing programs in a dedicated 5-acre campus.",
     programs: ["B.Sc. Nursing", "Post Basic B.Sc. Nursing"],
     affiliations: ["INC", "WBUHS", "WBNC", "Govt. of West Bengal"],
-    fullStory: "The International Institute of Nursing & Research (IINR) is the First NAAC Accredited Nursing College in West Bengal, located in Kalyani. Spread across a sprawling campus, it offers advanced nursing degrees that emphasize research-based clinical practice. IINR is equipped with high-fidelity simulation labs and extensive library resources. It focuses on developing professional nurses who are capable of leading healthcare teams and conducting independent clinical research, fully aligned with the global standards of nursing excellence.",
+    fullStory: "The International Institute of Nursing & Research (IINR) is a premier nursing college in Kalyani, West Bengal, with NAAC accreditation currently in progress. Spread across a sprawling campus, it offers advanced nursing degrees that emphasize research-based clinical practice. IINR is equipped with high-fidelity simulation labs and extensive library resources. It focuses on developing professional nurses who are capable of leading healthcare teams and conducting independent clinical research, fully aligned with the global standards of nursing excellence.",
     admissionsProcess: "Follows strict WBUHS and INC guidelines. Candidates are selected based on academic performance and JENPAS/WBJEE scores for B.Sc. Nursing.",
     eligibilityCriteria: "For B.Sc. Nursing: 10+2 with Science (PCB) and English. For Post Basic B.Sc. Nursing: GNM qualification from a recognized board.",
     contactDetails: {
@@ -199,7 +200,7 @@ const institutesDataRaw = [
     description: "The Foundation's premier medical institute and a 150 Seat MBBS College, featuring Eastern India's First Digital Cadaver Lab.",
     programs: ["MBBS (Bachelor of Medicine, Bachelor of Surgery)"],
     affiliations: ["NMC", "WBUHS", "Govt. of West Bengal"],
-    fullStory: "JMN Medical College is the flagship medical education initiative of the Nirmala Foundation. It is a state-of-the-art 150-seat MBBS institution in Chakdaha, Nadia, that combines advanced medical research with comprehensive clinical training. With its own 605-bed super-specialty hospital (KGH), JMNMC ensures over 450 students receive early and consistent clinical exposure. The college is built with a vision to transform medical education in Eastern India by integrating digital healthcare tools, such as Eastern India's First Digital Cadaver Lab, maintaining a 98% average academic achievement.",
+    fullStory: "JMN Medical College is the flagship medical education initiative of the Nirmala Foundation. It is a state-of-the-art 150-seat MBBS institution in Chakdaha, Nadia, that combines advanced medical research with comprehensive clinical training. With its own 605-bed super-specialty hospital (KGH), JMNMC ensures over 450 students receive early and consistent clinical exposure. The college is built with a vision to transform medical education in Eastern India by integrating digital healthcare tools, such as Eastern India's First Digital Cadaver Lab.",
     admissionsProcess: "Admissions are strictly governed by the National Medical Commission (NMC) and WBUHS. Candidates must qualify for NEET-UG and participate in state-level counseling.",
     eligibilityCriteria: "Must qualify NEET-UG. 10+2 with Physics, Chemistry, Biology/Biotech, and English with required aggregate percent.",
     contactDetails: {
@@ -212,7 +213,7 @@ const institutesDataRaw = [
       "NMC Approved infrastructure and laboratories",
       "Eastern India's First Digital Cadaver Lab",
       "In-house 605-bed Teaching Hospital (KGH)",
-      "98% Average Academic Achievement",
+      "Board exam pass rate: 96% (2022-23 batch, Source: JMNMC Academic Office)",
       "Residential campus with global-standard hostels"
     ],
     videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",

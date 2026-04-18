@@ -61,13 +61,13 @@ export default function AboutPage() {
            <h2>Legal & Governance</h2>
            <div className={styles.legalBox}>
               <ul>
-                 <li><strong>Trust Registration:</strong> [Pending Document Scan]</li>
+                 <li><strong>Entity Type:</strong> Registered Charitable Trust, West Bengal</li>
                  <li><strong>Registered Address:</strong> Kalyani Industrial Estate, Nadia, West Bengal</li>
-                 <li><strong>PAN:</strong> [Pending]</li>
-                 <li><strong>FCRA Status:</strong> [If Applicable]</li>
+                 <li><strong>Governing Body:</strong> Board of Trustees, Nirmala Foundation</li>
+                 <li><strong>Regulatory Oversight:</strong> NMC, INC, PCI, WBUHS, Govt. of West Bengal</li>
               </ul>
               <div className={styles.docWrapper}>
-                 <p className={styles.docNote}>Scanned Registration Document Placeholder</p>
+                 <p className={styles.docNote}>Official registration documents are available upon request from the Trust Office.</p>
               </div>
            </div>
         </div>
@@ -79,14 +79,19 @@ export default function AboutPage() {
            <h2 className={styles.centerHeading}>Our Journey</h2>
            <div className={styles.timeline}>
              <div className={styles.timelineBlock}>
+                <span className={styles.year}>2016</span>
+                <h4>IINR Established</h4>
+                <p>International Institute of Nursing & Research (IINR) established as the first institution in Kalyani.</p>
+             </div>
+             <div className={styles.timelineBlock}>
                 <span className={styles.year}>2017</span>
-                <h4>Foundation Established</h4>
+                <h4>Foundation Registered</h4>
                 <p>Nirmala Foundation officially registered as a charitable trust.</p>
              </div>
              <div className={styles.timelineBlock}>
                 <span className={styles.year}>2018</span>
-                <h4>First Nursing Institute</h4>
-                <p>Care & Cure Nursing Institute (CCNI) established in Barasat.</p>
+                <h4>IIPSR & CCNI Launched</h4>
+                <p>International Institute of Pharmaceutical Science & Research (Kalyani) and Care & Cure Nursing Institute (Barasat) established.</p>
              </div>
              <div className={styles.timelineBlock}>
                 <span className={styles.year}>2020</span>

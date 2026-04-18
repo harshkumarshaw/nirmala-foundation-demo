@@ -139,4 +139,42 @@
   .formContainer {
     padding: 1.5rem;
   }
+  .neetSection .formRow {
+    flex-direction: column;
+  }
+  .applyWrapper {
+    padding: 3rem 1rem;
+  }
+  .applyHeader h1 {
+    font-size: 1.8rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .applyHeader h1 {
+    font-size: 1.5rem;
+  }
+  .formContainer {
+    padding: 1rem;
+  }
+}
+
+.neetSection {
+  background: #FFF9E6;
+  border: 1px solid #F0D060;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.neetLabel {
+  font-weight: 700;
+  color: #8B6914;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.neetSection .formRow {
+  display: flex;
+  gap: 1rem;
+}
+

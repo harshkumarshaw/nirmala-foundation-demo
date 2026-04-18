@@ -5,7 +5,6 @@ import styles from "./page.module.css";
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { institutesData, strategicRoadmap } from "@/data/institutesData";
-import mediaRegistry from "@/data/mediaRegistry.json";
 
 const credentialsData = [
   { icon: "🛡️", label: "NMC Approved" },
@@ -51,7 +50,7 @@ const divisionStruct = [
     tag: "Medical Sciences",
     title: "Physicians \nof Tomorrow",
     colorClass: styles.panelMedical,
-    video: mediaRegistry.home.panels.medical,
+    image: "https://images.unsplash.com/photo-1576091160399-112ba9d15819?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["jmn", "kgh"].includes(i.slug))
   },
   {
@@ -59,7 +58,7 @@ const divisionStruct = [
     tag: "Nursing Excellence",
     title: "Education \nThat Saves Lives",
     colorClass: styles.panelNursing,
-    video: mediaRegistry.home.panels.nursing,
+    image: "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["iinr", "ichfn", "ccnr"].includes(i.slug))
   },
   {
@@ -67,7 +66,7 @@ const divisionStruct = [
     tag: "Healthcare Administration",
     title: "Leaders in \nGovernance",
     colorClass: styles.panelManagement,
-    video: mediaRegistry.home.panels.management,
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["iihmahs"].includes(i.slug))
   },
   {
@@ -75,7 +74,7 @@ const divisionStruct = [
     tag: "Pharmaceutical Sciences",
     title: "Pioneering \nMedicines",
     colorClass: styles.panelPharmacy,
-    video: mediaRegistry.home.panels.pharmacy,
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["iipsr"].includes(i.slug))
   }
 ];
@@ -127,33 +126,15 @@ export default function Home() {
       transition={{ duration: 1 }}
       className={styles.mainWrapper}
     >
-      {/* 1. Cinematic Video Mask Hero */}
+      {/* 1. Hero Section */}
       <section ref={heroRef} className={styles.heroSection}>
-        {mediaRegistry.home.hero_video.includes("youtube.com") || mediaRegistry.home.hero_video.includes("youtu.be") ? (
-          <motion.div 
-            className={styles.bgVideo}
-            style={{ y: videoY, opacity }}
-          >
-            <iframe 
-              src={`https://www.youtube.com/embed/${mediaRegistry.home.hero_video.split('v=')[1]?.split('&')[0]}?autoplay=1&mute=1&controls=0&loop=1&playlist=${mediaRegistry.home.hero_video.split('v=')[1]?.split('&')[0]}&showinfo=0&rel=0&modestbranding=1`}
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none', transform: 'scale(1.5)' }}
-              title="Campus Aerial Background Video"
-            />
-          </motion.div>
-        ) : (
-          <motion.video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className={styles.bgVideo}
-            style={{ y: videoY, opacity }}
-          >
-            <source src={mediaRegistry.home.hero_video} type="video/mp4" />
-          </motion.video>
-        )}
+        <motion.img 
+          src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80"
+          alt="Nirmala Foundation campus aerial view, Kalyani, West Bengal"
+          className={styles.bgImage}
+          style={{ y: videoY, opacity }}
+          loading="eager"
+        />
         
         <div className={styles.maskOverlay}>
           <div className={styles.heroContent}>
@@ -229,7 +210,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              Established in 2017, Nirmala Foundation is a registered charitable trust (Reg. Pending) founded to uplift society through quality education. In just a few years, it has grown into a comprehensive healthcare education ecosystem comprising 6 institutes and a super specialty hospital across 6 cities.
+              Established in 2017, Nirmala Foundation is a registered charitable trust founded to uplift society through quality education. In just a few years, it has grown into a comprehensive healthcare education ecosystem comprising 7 institutes and a 605-bed super specialty hospital across 6 campuses.
             </motion.p>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
               <Link href="/about" className={styles.textLink}>Read Our Full Story →</Link>
@@ -290,7 +271,7 @@ export default function Home() {
               </div>
               <div className={styles.panelImage}>
                 <div className={styles.panelImageOverlay} />
-                <video autoPlay loop muted playsInline src={div.video} title={`${div.tag} Background Video`} />
+                <img src={div.image} alt={`${div.tag} — Nirmala Foundation`} loading="lazy" />
               </div>
             </motion.div>
           ))}

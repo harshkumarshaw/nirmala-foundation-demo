@@ -2,10 +2,23 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { institutesData } from '@/data/institutesData'
+import MobileNav from '@/components/MobileNav'
 
 export const metadata: Metadata = {
-  title: 'Nirmala Foundation | Premium Healthcare Education',
-  description: 'Nirmala Foundation operates 7 premier institutes shaping the future of healthcare professions aligned with NEP 2020.',
+  title: 'Nirmala Foundation | Healthcare Education | Kalyani, West Bengal',
+  description: 'Nirmala Foundation operates 7 premier healthcare education institutes and a 605-bed super specialty hospital in West Bengal. MBBS, Nursing, Pharmacy admissions open.',
+  openGraph: {
+    title: 'Nirmala Foundation | Healthcare Education | Kalyani, West Bengal',
+    description: 'Premier healthcare education ecosystem — 7 institutes, 605-bed hospital, 4500+ students. Admissions open 2025-26.',
+    url: 'https://nirmala-foundation-demo.vercel.app',
+    siteName: 'Nirmala Foundation',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nirmala Foundation | Healthcare Education',
+    description: 'Premier healthcare education ecosystem in West Bengal.',
+  }
 }
 
 export default function RootLayout({
@@ -44,7 +57,7 @@ export default function RootLayout({
           <Link href="/" className="navLogo" aria-label="Nirmala Foundation Home">
             Nirmala Foundation
           </Link>
-          <div className="navLinks">
+          <div className="navLinks desktopLinks">
             {/* 1. Our Institutes */}
             <div className="navItem">
               Our Institutes
@@ -113,6 +126,7 @@ export default function RootLayout({
               <button className="btnPrimary" aria-label="Apply Now">Apply Now</button>
             </Link>
           </div>
+          <MobileNav />
         </nav>
 
         <main id="main-content">
@@ -153,7 +167,7 @@ export default function RootLayout({
                   <a href="tel:+918000000000">+91 80000 00000</a><br/>
                   <a href="https://wa.me/918000000000" style={{ color: '#25D366', fontSize: '0.9rem' }}>Chat on WhatsApp</a>
                 </li>
-                <li style={{ marginTop: '1rem' }}><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Trust Reg: IV-190300XXX (Placeholder)</span></li>
+
                 <li><Link href="/nirf" style={{ fontSize: '0.8rem' }}>NIRF Disclosure</Link></li>
                 <li><Link href="/rti" style={{ fontSize: '0.8rem' }}>RTI Act</Link></li>
                 <li><Link href="/grievance" style={{ fontSize: '0.8rem' }}>Grievance Redressal</Link></li>

@@ -316,16 +316,36 @@
   .contentGrid {
     grid-template-columns: 1fr;
     gap: 4rem;
+    padding: 4rem 1.5rem;
   }
   .sidebar {
     position: static;
   }
+  .hero {
+    height: 45vh;
+  }
 }
 
 @media (max-width: 768px) {
-  .heroTitle { font-size: 2.5rem; }
-  .introText { font-size: 1.8rem; }
+  .heroTitle { font-size: 2rem; }
+  .introText { font-size: 1.5rem; }
   .contactCards { grid-template-columns: 1fr; }
   .featuresGrid { grid-template-columns: 1fr; }
   .admissionsBlock { padding: 1.5rem; }
+  .hero { height: 40vh; }
+  .contentGrid { padding: 3rem 1rem; gap: 3rem; }
+  .mainColumn { gap: 3rem; }
+  .sectionHeader h3 { font-size: 1.8rem; }
+  .heroLocation { font-size: 0.9rem; letter-spacing: 0.1em; }
+  .admissionsRow { flex-direction: column; gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .heroTitle { font-size: 1.6rem; }
+  .introText { font-size: 1.2rem; }
+  .contentGrid { padding: 2rem 1rem; gap: 2rem; }
+  .hero { height: 35vh; }
+  .establishedTag { font-size: 0.7rem; padding: 0.4rem 1rem; }
+  .featureCard { padding: 1.5rem; }
+  .sideBox { padding: 1.5rem; }
 }

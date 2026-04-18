@@ -16,18 +16,13 @@
   background-color: var(--bg-main);
 }
 
-.bgVideo {
+.bgImage {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 120%; /* for parallax */
   z-index: 0;
-}
-
-.bgVideo video {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -285,7 +280,7 @@
   position: relative;
 }
 
-.panelImage video {
+.panelImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -605,6 +600,8 @@
   .panelImage { height: 300px; order: -1; }
   .panelImageOverlay { background: linear-gradient(to bottom, transparent 0%, var(--bg-surface) 100%); }
   .panelContent { padding: 2rem; }
+  .heroSection { height: 70vh; }
+  .bottomCtaContent h2 { font-size: 2.5rem; }
 }
 
 @media (max-width: 768px) {
@@ -615,4 +612,39 @@
   .credentialsContainer { justify-content: center; }
   .credentialDivider { display: none; }
   .heroTitle { font-size: 2.5rem; }
+  .heroSection { height: 60vh; }
+  .heroContent { margin-top: 5vh; }
+  .statNumber { font-size: 2.5rem; }
+  .aboutSection { padding: 4rem 1.5rem; }
+  .aboutText h2 { font-size: 2rem; }
+  .divisionsSection { padding: 4rem 1rem; }
+  .stickyPanel h2 { font-size: 2rem; }
+  .panelContent { padding: 1.5rem; }
+  .accreditationsSection { padding: 4rem 1.5rem; }
+  .accredHeader h2 { font-size: 2rem; }
+  .testimonialsSection { padding: 4rem 1.5rem; }
+  .testimoHeader h2 { font-size: 2rem; }
+  .roadmapSection { padding: 4rem 1.5rem; }
+  .roadmapHeader h2 { font-size: 2rem; }
+  .bottomCtaSection { padding: 4rem 1.5rem; }
+  .bottomCtaContent h2 { font-size: 2rem; }
+  .bottomCtaContent p { font-size: 1rem; }
+  .rowHeader { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+  .heroTitle { font-size: 1.8rem; }
+  .heroActions { gap: 0.75rem; }
+  .btnPrimaryHero, .btnSecondaryHero { padding: 0.75rem 1.5rem; font-size: 0.85rem; }
+  .credentialsStrip { padding: 1rem 0; }
+  .credentialLabel { font-size: 0.8rem; }
+  .statNumber { font-size: 2rem; }
+  .statsSection { padding: 2.5rem 1rem; }
+  .collabBox { padding: 2rem; }
+  .collabBox h3 { font-size: 1.2rem; }
+  .aboutText h2 { font-size: 1.6rem; }
+  .stickyPanel h2 { font-size: 1.5rem; }
+  .testimoCard { padding: 1.5rem; }
+  .testimoQuote { font-size: 0.95rem; }
+  .ctaBannerBtn { padding: 0.75rem 2rem; font-size: 1rem; }
 }
