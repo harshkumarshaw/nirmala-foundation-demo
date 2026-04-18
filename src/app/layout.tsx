@@ -13,11 +13,35 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Nirmala Foundation",
+    "url": "https://nirmala-foundation-demo.vercel.app",
+    "logo": "https://nirmala-foundation-demo.vercel.app/logo.png",
+    "description": "Registered charitable trust uplifting society through quality education across nursing, medicine, pharmacy, and management.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kalyani",
+      "addressRegion": "West Bengal",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918000000000",
+    "email": "info@nirmalafoundation.co.in"
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      </head>
       <body>
-        <nav className="navContainer">
-          <Link href="/" className="navLogo">
+        <a href="#main-content" className="skip-nav" aria-label="Skip to main content">Skip to main content</a>
+        <nav className="navContainer" aria-label="Main Navigation">
+          <Link href="/" className="navLogo" aria-label="Nirmala Foundation Home">
             Nirmala Foundation
           </Link>
           <div className="navLinks">
@@ -85,11 +109,15 @@ export default function RootLayout({
               </div>
             </div>
 
-            <button className="btnPrimary">Apply Now</button>
+            <Link href="/apply" tabIndex={-1}>
+              <button className="btnPrimary" aria-label="Apply Now">Apply Now</button>
+            </Link>
           </div>
         </nav>
 
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
 
         <footer className="footerMain">
           <div className="footerGrid">
@@ -101,8 +129,10 @@ export default function RootLayout({
               <h4>Quick Links</h4>
               <ul>
                 <li><Link href="/">Home</Link></li>
-                <li><Link href="#">About Us</Link></li>
-                <li><Link href="#">Admissions</Link></li>
+                <li><Link href="/about">About Us</Link></li>
+                <li><Link href="/admissions">Admissions</Link></li>
+                <li><Link href="/careers">Careers</Link></li>
+                <li><Link href="/sitemap.xml">Sitemap</Link></li>
               </ul>
             </div>
             <div className="footerCol">
@@ -111,18 +141,36 @@ export default function RootLayout({
                 <li><Link href="/institutes/jmn">JMN Medical College</Link></li>
                 <li><Link href="/institutes/iinr">IINR Nursing</Link></li>
                 <li><Link href="/institutes/iipsr">IIPSR Pharmacy</Link></li>
+                <li><Link href="/institutes/iihmahs">IIHMAHS Administration</Link></li>
               </ul>
             </div>
             <div className="footerCol">
-              <h4>Contact</h4>
+              <h4>Contact & Legal</h4>
               <ul>
                 <li>Kalyani, Nadia, West Bengal</li>
-                <li>info@nirmalafoundation.co.in</li>
-                <li>+91 90000 00000</li>
+                <li><a href="mailto:info@nirmalafoundation.co.in">info@nirmalafoundation.co.in</a></li>
+                <li>
+                  <a href="tel:+918000000000">+91 80000 00000</a><br/>
+                  <a href="https://wa.me/918000000000" style={{ color: '#25D366', fontSize: '0.9rem' }}>Chat on WhatsApp</a>
+                </li>
+                <li style={{ marginTop: '1rem' }}><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Trust Reg: IV-190300XXX (Placeholder)</span></li>
+                <li><Link href="/nirf" style={{ fontSize: '0.8rem' }}>NIRF Disclosure</Link></li>
+                <li><Link href="/rti" style={{ fontSize: '0.8rem' }}>RTI Act</Link></li>
+                <li><Link href="/grievance" style={{ fontSize: '0.8rem' }}>Grievance Redressal</Link></li>
               </ul>
             </div>
           </div>
         </footer>
+
+        {/* Mobile Sticky CTA */}
+        <div className="mobile-cta-bar">
+          <a href="tel:+918000000000" className="mobile-cta-phone" aria-label="Call Us">
+             <span>📞</span> Call Us
+          </a>
+          <Link href="/apply" className="mobile-cta-btn" aria-label="Apply Now">
+            Apply Now
+          </Link>
+        </div>
       </body>
     </html>
   )

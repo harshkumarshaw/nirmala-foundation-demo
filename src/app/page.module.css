@@ -1,334 +1,347 @@
 .mainWrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-color: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-sans);
-  overflow-x: hidden;
 }
 
-/* 1. Video Masking Hero */
+/* 1. Hero Section */
 .heroSection {
   position: relative;
-  height: 100vh;
-  background: var(--bg-main);
+  height: 90vh;
+  width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-main);
 }
 
 .bgVideo {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* for parallax */
+  z-index: 0;
+}
+
+.bgVideo video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.9;
-  filter: saturate(1.1) brightness(1.05);
 }
 
 .maskOverlay {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 100%);
+  inset: 0;
+  z-index: 10;
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.2) 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  z-index: 2;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
 .heroContent {
-  text-align: center;
-  position: relative;
-  z-index: 10;
-  pointer-events: none;
+  max-width: 1000px;
+  margin-top: 10vh;
 }
 
 .heroTitle {
   font-family: var(--font-serif);
-  font-size: 13vw;
-  font-weight: 900;
-  color: var(--primary); 
-  margin: 0;
-  line-height: 0.85;
-  letter-spacing: -0.04em;
-  text-transform: uppercase;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.heroSubtitle {
-  font-size: 1.1rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   color: var(--primary);
-  margin-top: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  padding: 0.75rem 2.5rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--glass-shadow);
-  display: inline-block;
-  border: 1px solid var(--glass-border);
+  line-height: 1.1;
+  margin-bottom: 2rem;
 }
 
-/* 2. Marquee */
-.marqueeSection {
-  background: var(--primary);
-  padding: 2rem 0;
-  overflow: hidden;
-  white-space: nowrap;
+.heroActions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimaryHero {
+  background-color: var(--accent);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 99px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnPrimaryHero:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btnSecondaryHero {
+  background-color: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 1rem 2.5rem;
+  border-radius: 99px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btnSecondaryHero:hover {
+  background-color: var(--bg-surface);
+  transform: translateY(-2px);
+}
+
+/* 2. Credentials Strip */
+.credentialsStrip {
+  background-color: var(--bg-main);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 1.5rem 0;
+}
+
+.credentialsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.credentialItem {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
 }
 
-.marqueeTrack {
-  display: inline-block;
-  animation: marquee 40s linear infinite;
-  color: var(--text-on-dark);
+.credentialIcon {
+  font-size: 1.5rem;
 }
 
-.marqueeItem {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-right: 5rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
+.credentialLabel {
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
-.marqueeItem span {
+.credentialDivider {
+  width: 1px;
+  height: 24px;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* 3. Hero Stats Strip */
+.statsSection {
+  background-color: var(--bg-main);
+  padding: 4rem 2rem;
+}
+
+.statsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.statNumber {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
   color: var(--accent);
-  margin: 0 1.5rem;
-  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.statLabel {
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
+/* 4. About Us Section */
 .aboutSection {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  padding: 10rem 0;
-  background: var(--bg-surface);
-  overflow: hidden;
-}
-
-.movingGradientBg {
-  position: absolute;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
-  background: radial-gradient(
-    circle at center,
-    rgba(15, 23, 42, 0.03) 0%,
-    rgba(217, 119, 6, 0.03) 30%,
-    rgba(15, 23, 42, 0) 70%
-  );
-  background-size: 200% 200%;
-  animation: bgPulse 20s ease-in-out infinite alternate;
-  z-index: 1;
-}
-
-@keyframes bgPulse {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-5%, -5%) scale(1.1); }
+  background-color: var(--bg-surface);
+  padding: 6rem 2rem;
 }
 
 .aboutGrid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 6rem;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
 .aboutText h2 {
-  font-family: var(--font-serif);
-  font-size: 5rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.1;
-  color: var(--color-primary);
 }
 
 .aboutText p {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: var(--color-text-muted);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
+}
+
+.textLink {
+  color: var(--accent);
+  font-weight: 600;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+.textLink:hover {
+  color: var(--accent-hover);
 }
 
 .collabBox {
   background: white;
-  border: 1px solid rgba(0,0,0,0.05);
-  padding: 4rem;
-  border-radius: 30px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--accent);
+}
+
+.collabIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .collabBox h3 {
-  color: var(--color-secondary);
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .collabBox p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--color-text-muted);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-/* 4. Sticky Parallax Divisions */
+.collabBtn {
+  display: inline-block;
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.collabBtn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* 5. Divisions */
 .divisionsSection {
-  background: var(--color-background);
-  padding: 10vh 0 20vh 0;
-  position: relative;
+  background-color: var(--bg-main);
+  padding: 6rem 2rem;
 }
 
 .stickyParent {
   position: relative;
-  padding: 0 2rem;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .stickyPanel {
   position: sticky;
-  height: 85vh;
+  top: 10vh;
+  margin-bottom: 4rem;
+  height: 80vh;
   border-radius: var(--radius-lg);
-  margin-bottom: 5vh;
   overflow: hidden;
-  box-shadow: 0 20px 80px rgba(15, 23, 42, 0.08);
   display: flex;
-  background: var(--bg-surface);
-  border: 1px solid rgba(15, 23, 42, 0.05);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--bg-surface);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.panelContent {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
 }
 
 .panelImage {
-  width: 50%;
-  height: 100%;
+  flex: 1;
   position: relative;
 }
 
-.panelImage video, .panelImage img {
+.panelImage video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(1.1) contrast(1.1);
 }
 
 .panelImageOverlay {
   position: absolute;
-  top:0; left:0; width:100%; height:100%;
-  background: linear-gradient(to right, rgba(15, 23, 42, 0.4) 0%, transparent 60%);
-}
-
-.panelContent {
-  width: 50%;
-  padding: 6rem 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  inset: 0;
+  background: linear-gradient(to right, var(--bg-surface) 0%, transparent 50%);
 }
 
 .panelTag {
-  align-self: flex-start;
-  background: var(--accent);
-  color: white;
-  padding: 0.6rem 2.2rem;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  color: var(--accent);
+  font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
-  font-size: 0.75rem;
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
 }
 
-.panelContent h2 {
-  font-family: var(--font-serif);
-  font-size: 4.8rem;
+.stickyPanel h2 {
+  font-size: 3rem;
   margin-bottom: 2.5rem;
-  line-height: 1;
-  color: var(--primary);
-  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .institutesList {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  max-height: 45vh;
-  overflow-y: auto;
-  padding-right: 1.5rem;
+  gap: 1.5rem;
 }
-
-.institutesList::-webkit-scrollbar { width: 4px; }
-.institutesList::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 4px; }
 
 .instituteRow {
-  background: var(--bg-main);
-  padding: 1.75rem 2.25rem;
-  border-radius: var(--radius-md);
-  border-left: 5px solid var(--accent);
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  border: 1px solid rgba(15, 23, 42, 0.03);
-}
-
-.instituteRow:hover {
-  transform: translateX(12px);
   background: white;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .rowHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .rowHeader h4 {
-  font-size: 1.5rem;
-  font-family: var(--font-serif);
-  color: var(--primary) !important;
   margin: 0;
-  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .navButton {
-  background: var(--primary) !important;
-  color: white !important;
-  border: none;
-  padding: 0.6rem 1.8rem;
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  letter-spacing: 0.05em;
-}
-
-.navButton:hover {
-  background: var(--accent) !important;
-  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .programTags {
@@ -339,100 +352,267 @@
 
 .pTag {
   font-size: 0.75rem;
-  background: rgba(0,0,0,0.05) !important;
-  color: var(--color-text) !important;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  background: var(--bg-surface);
+  padding: 4px 10px;
+  border-radius: 99px;
+  color: var(--text-secondary);
 }
 
-/* Panel Colors (Nirmala Foundation Branding Theme) */
-.panelMedical { background: #E8EDF2; top: 10vh; z-index: 10; color: #111; border: 1px solid rgba(0,0,0,0.05); }
-.panelNursing { background: #FCEFE9; top: 14vh; z-index: 20; color: #111; border: 1px solid rgba(0,0,0,0.05); }
-.panelManagement { background: #E5F0F5; top: 18vh; z-index: 30; color: #111; border: 1px solid rgba(0,0,0,0.05); }
-.panelPharmacy { background: #FFFFFF; top: 22vh; z-index: 40; color: #111; border: 1px solid rgba(0,0,0,0.1); }
+/* 6. Accreditations */
+.accreditationsSection {
+  background-color: var(--bg-surface);
+  padding: 5rem 2rem;
+}
 
-.panelMedical h2, .panelNursing h2, .panelManagement h2, .panelPharmacy h2 { color: var(--color-primary); }
+.accredContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-/* 5. Roadmap Section */
-.roadmapSection {
-  padding: 12rem 2rem;
+.accredHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.metaTag {
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.accredHeader h2 {
+  font-size: 2.5rem;
+}
+
+.accredGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.accredBadge {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.badgePlaceholder {
+  width: 80px;
+  height: 80px;
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+}
+
+.accredBadge p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 7. Testimonials */
+.testimonialsSection {
+  background-color: var(--bg-main);
+  padding: 6rem 2rem;
+}
+
+.testimoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimoHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.testimoHeader h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimoHeader p {
+  color: var(--text-secondary);
+}
+
+.testimoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimoCard {
   background: var(--bg-surface);
-  position: relative;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+}
+
+.testimoQuote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--primary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.testimoAuthorBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.authorName {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.authorMeta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* 8. Roadmap */
+.roadmapSection {
+  background-color: var(--bg-surface);
+  padding: 6rem 2rem;
 }
 
 .roadmapHeader {
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto 8rem auto;
-}
-
-.roadmapHeader h2 {
-  font-family: var(--font-serif);
-  font-size: 4.5rem;
-  margin-bottom: 2.5rem;
-  color: var(--primary);
-  line-height: 1;
+  margin-bottom: 4rem;
 }
 
 .roadmapHeader span {
   color: var(--accent);
-  display: block;
-  font-size: 1rem;
-  letter-spacing: 0.25em;
+  font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.roadmapHeader h2 {
+  font-size: 2.5rem;
 }
 
 .roadmapGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .roadCard {
-  background: var(--bg-main);
-  border: 1px solid rgba(15, 23, 42, 0.05);
-  border-radius: var(--radius-lg);
-  padding: 5rem 4rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
 
-.roadCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
-  border-color: var(--accent);
-}
-
-.roadCard::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 350px; height: 350px;
-  background: radial-gradient(circle, rgba(217, 119, 6, 0.05) 0%, transparent 70%);
-  border-radius: 50%;
-  transform: translate(30%, -30%);
+.roadPhase {
+  flex-shrink: 0;
+  background: var(--accent-light);
+  color: var(--accent-hover);
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-right: 2rem;
 }
 
 .roadCard h3 {
-  font-family: var(--font-serif);
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
-  z-index: 2;
-  position: relative;
-  color: var(--primary);
+  font-size: 1.25rem;
+  margin: 0 2rem 0 0;
+  width: 250px;
 }
 
 .roadCard p {
-  font-size: 1.15rem;
-  line-height: 1.8;
   color: var(--text-secondary);
-  z-index: 2;
-  position: relative;
+  font-size: 0.95rem;
+  margin: 0;
+  flex: 1;
+}
+
+/* 9. Bottom CTA */
+.bottomCtaSection {
+  background-color: var(--bg-dark);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.bottomCtaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bottomCtaContent h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.bottomCtaContent p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.ctaBannerBtn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 99px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.ctaBannerBtn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .heroTitle { font-size: 3.5rem; }
+  .stickyPanel { flex-direction: column; height: auto; position: static; }
+  .panelImage { height: 300px; order: -1; }
+  .panelImageOverlay { background: linear-gradient(to bottom, transparent 0%, var(--bg-surface) 100%); }
+  .panelContent { padding: 2rem; }
+}
+
+@media (max-width: 768px) {
+  .aboutGrid { grid-template-columns: 1fr; gap: 2rem; }
+  .roadCard { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .roadPhase { margin-right: 0; margin-bottom: 0.5rem; }
+  .roadCard h3 { width: auto; margin-right: 0; margin-bottom: 0.5rem; }
+  .credentialsContainer { justify-content: center; }
+  .credentialDivider { display: none; }
+  .heroTitle { font-size: 2.5rem; }
 }

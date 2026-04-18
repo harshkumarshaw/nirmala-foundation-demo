@@ -15,7 +15,7 @@ const institutesDataRaw = [
     eligibilityCriteria: "For BHA: 10+2 with a minimum percentage in any stream. For MHA: Graduation in any discipline (Science/Commerce/Arts/Medical). For M.Sc. Applied Nutrition: B.Sc. in relevant subjects (Nutrition, Food Science, etc.)",
     contactDetails: {
       address: "Phase-II, Kalyani Industrial Estate (Plots A-2 to A-5), Nadia, West Bengal",
-      phone: "+91 90000 00000",
+      phone: "+91 80000 00000",
       email: "iihmahs@nirmalafoundation.co.in",
       office: "Main Administrative Block, Kalyani Campus"
     },
@@ -47,7 +47,7 @@ const institutesDataRaw = [
     eligibilityCriteria: "For B.Pharm: 10+2 with Physics, Chemistry, and Biology/Mathematics. For D.Pharm: 10+2 with Science stream.",
     contactDetails: {
       address: "Kalyani Industrial Area, Nadia, West Bengal",
-      phone: "+91 90000 00001",
+      phone: "+91 80000 00000",
       email: "iipsr@nirmalafoundation.co.in",
       office: "Pharmacy Education Wing"
     },
@@ -79,7 +79,7 @@ const institutesDataRaw = [
     eligibilityCriteria: "10+2 Science (Physics, Chemistry, Biology) with English for B.Sc Nursing. For GNM: 10+2 in any stream (English mandatory).",
     contactDetails: {
       address: "11, Dr. Biresh Guha Street, Park Circus, Kolkata",
-      phone: "+91 90000 00002",
+      phone: "+91 80000 00000",
       email: "ichfn@nirmalafoundation.co.in",
       office: "Nursing Admin Office"
     },
@@ -110,7 +110,7 @@ const institutesDataRaw = [
     eligibilityCriteria: "Refer to training and clinical observer guidelines for specific medical programs.",
     contactDetails: {
       address: "Plot B-14, Phase III, Kalyani Industrial Estate, Nadia",
-      phone: "+91 90000 00003",
+      phone: "+91 80000 00000",
       email: "kgh@nirmalafoundation.co.in",
       office: "Medical Superintendent's Office"
     },
@@ -141,7 +141,7 @@ const institutesDataRaw = [
     eligibilityCriteria: "For B.Sc. Nursing: 10+2 with Science (PCB) and English. For Post Basic B.Sc. Nursing: GNM qualification from a recognized board.",
     contactDetails: {
       address: "Plot A-2, Kalyani Industrial Estate, Nadia, West Bengal",
-      phone: "+91 90000 00004",
+      phone: "+91 80000 00000",
       email: "iinr@nirmalafoundation.co.in",
       office: "IINR Administrative Block"
     },
@@ -173,7 +173,7 @@ const institutesDataRaw = [
     eligibilityCriteria: "10+2 in any stream from a recognized board with minimum aggregate requirements.",
     contactDetails: {
       address: "Phase-II, Kalyani industrial area near Phase-III crossing",
-      phone: "+91 90000 00005",
+      phone: "+91 80000 00000",
       email: "ccnr@nirmalafoundation.co.in",
       office: "Principal's Office, CCNI"
     },
@@ -204,7 +204,7 @@ const institutesDataRaw = [
     eligibilityCriteria: "Must qualify NEET-UG. 10+2 with Physics, Chemistry, Biology/Biotech, and English with required aggregate percent.",
     contactDetails: {
       address: "Kalyani Industrial Estate, Nadia, West Bengal",
-      phone: "+91 90000 00006",
+      phone: "+91 80000 00000",
       email: "jmnmc@nirmalafoundation.co.in",
       office: "Dean's Office, JMN Campus"
     },
@@ -226,19 +226,19 @@ const institutesDataRaw = [
 
 export const strategicRoadmap = [
   {
-    phase: "Empowerment (2025)",
-    goal: "NEP 2020 Integration",
-    description: "Focus on multi-disciplinary learning, credit transfers, and hospital simulation upgrades."
+    phase: "Implementation (2025)",
+    goal: "NEP 2020 Academic Framework Integration",
+    description: "Launch the Academic Bank of Credits (ABC) portal for all nursing and pharmacy students. Expand the advanced High-Fidelity Simulation Lab across Kalyani and Barasat campuses for 500+ students."
   },
   {
-    phase: "Excellence (2026-2027)",
-    goal: "Global Collaboration",
-    description: "MoUs with international medical universities and exchange programs for top-performing students."
+    phase: "Global Horizons (2026-2027)",
+    goal: "European Clinical Exchange Programs",
+    description: "Activate the Future Nurses Germany MoU to send the first cohort of 50 GNM/B.Sc students to partner hospitals in Munich and Berlin for a 6-month clinical residency."
   },
   {
-    phase: "Expansion (2028-2030)",
-    goal: "Nirmala Health City",
-    description: "Establishment of a 500-bed super-specialty teaching hospital and research-first PhD programs."
+    phase: "Infrastructure (2028-2030)",
+    goal: "Nirmala Health City Development",
+    description: "Phase 1 construction of a new 500-bed oncology and cardiology block on the newly acquired 5-acre adjacent campus. Initial regulatory filings submitted to NMC."
   }
 ];
 

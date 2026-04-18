@@ -1,0 +1,142 @@
+.applyWrapper {
+  min-height: 80vh;
+  background-color: var(--bg-surface);
+  padding: 4rem 2rem;
+  font-family: var(--font-sans);
+}
+
+.applyHeader {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.applyHeader h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.applyHeader p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.formContainer {
+  background: white;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  padding: 3rem;
+  border-top: 4px solid var(--accent);
+}
+
+.applyForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.formRow > div {
+  flex: 1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="tel"],
+.formGroup input[type="email"],
+.formGroup input[type="date"],
+.formGroup input[type="number"],
+.formGroup select {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  background: var(--bg-surface);
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.formGroup input[type="file"] {
+  padding: 0.5rem 0;
+}
+
+.fileHelp {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.checkboxGroup input {
+  margin-top: 4px;
+}
+
+.checkboxGroup label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.submitBtn {
+  margin-top: 1rem;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.successMessage {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.successMessage h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.successMessage p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .formRow {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .formContainer {
+    padding: 1.5rem;
+  }
+}

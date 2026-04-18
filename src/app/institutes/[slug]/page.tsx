@@ -21,8 +21,44 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
+  // Construct structured data based on institute type
+  const isHospital = institute.slug === 'kgh';
+  const schema = isHospital ? {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    "name": institute.name,
+    "description": institute.description,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": institute.contactDetails.address,
+      "addressLocality": institute.location,
+      "addressRegion": "West Bengal",
+      "addressCountry": "IN"
+    },
+    "telephone": institute.contactDetails.phone
+  } : {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": institute.programs[0] || "Healthcare Course",
+    "description": institute.description,
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": institute.name,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": institute.location,
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
   return (
     <div className={styles.pageWrapper}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       
       {/* 1. Immersive Media Hero */}
       <section ref={heroRef} className={styles.hero}>
@@ -119,8 +155,8 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
             </div>
           </motion.div>
 
-          {/* New Contact section */}
-          <motion.div 
+           {/* New Contact section */}
+           <motion.div 
             className={styles.contactBlock}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -137,12 +173,15 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
                </div>
                <div className={styles.contactCard}>
                   <strong>Direct Lines:</strong>
-                  <p>Phone: {institute.contactDetails.phone}</p>
-                  <p>Email: {institute.contactDetails.email}</p>
+                  <p>
+                    Phone: <a href={`tel:${institute.contactDetails.phone.replace(/\s/g, '')}`}>{institute.contactDetails.phone}</a>
+                  </p>
+                  <p>Email: <a href={`mailto:${institute.contactDetails.email}`}>{institute.contactDetails.email}</a></p>
                </div>
             </div>
           </motion.div>
         </div>
+
 
         {/* 3. Sticky Sidebar Data */}
         <div className={styles.sidebar}>
@@ -168,6 +207,11 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
             <h3>Accreditations & Affiliations</h3>
             <div className={styles.tagList}>
               {institute.affiliations.map((aff, i) => <span key={i}>{aff}</span>)}
+            </div>
+            <div className={styles.accredDetail}>
+               <p>Regulatory Body: <strong>{institute.affiliations[0]}</strong></p>
+               <p>Status: <span className={styles.statusGreen}>Approved / Verified</span></p>
+               <Link href="/about" className={styles.viewDocLink}>View Approval Documents</Link>
             </div>
           </motion.div>
 

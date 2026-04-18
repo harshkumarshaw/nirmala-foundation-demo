@@ -2,12 +2,49 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./page.module.css";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { institutesData, strategicRoadmap } from "@/data/institutesData";
 import mediaRegistry from "@/data/mediaRegistry.json";
 
-// Organize data into the massive panels
+const credentialsData = [
+  { icon: "🛡️", label: "NMC Approved" },
+  { icon: "🏥", label: "605-Bed Hospital" },
+  { icon: "🌍", label: "Germany MoU" },
+  { icon: "🎓", label: "4,500+ Students" }
+];
+
+const statsData = [
+  { end: 4500, suffix: "+", label: "Students Enrolled" },
+  { end: 605, suffix: "", label: "Bed Super Specialty Hospital" },
+  { end: 7, suffix: "", label: "Institutions" },
+  { end: 2017, suffix: "", label: "Established" }
+];
+
+const testimonialsData = [
+  {
+    quote: "The clinical exposure at KGH has been phenomenal. I feel completely ready for my future medical practice.",
+    author: "Riya Sen",
+    program: "MBBS, JMN Medical College",
+    batch: "2021",
+    image: "https://images.unsplash.com/photo-1594824432258-29ff844ea7ae?auto=format&fit=crop&w=150&q=80"
+  },
+  {
+    quote: "The infrastructure and labs here are world-class, making learning practical and enjoyable.",
+    author: "Aakash Gupta",
+    program: "B.Pharm, IIPSR",
+    batch: "2020",
+    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=150&q=80"
+  },
+  {
+    quote: "Direct clinical postings at Institute of Child Health gave me invaluable hands-on pediatric care experience.",
+    author: "Sneha Roy",
+    program: "B.Sc Nursing, ICHFN",
+    batch: "2022",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=80"
+  }
+];
+
 const divisionStruct = [
   {
     id: "medical",
@@ -43,6 +80,40 @@ const divisionStruct = [
   }
 ];
 
+// Simple interactive counter component
+function Counter({ end, suffix }: { end: number, suffix: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  
+  useEffect(() => {
+    let startTime: number | null = null;
+    const duration = 2000;
+    
+    // Only animate when near view
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        const step = (timestamp: number) => {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          setCount(Math.floor(progress * end));
+          if (progress < 1) {
+             window.requestAnimationFrame(step);
+          } else {
+             setCount(end); // ensure it lands exactly
+          }
+        };
+        window.requestAnimationFrame(step);
+        observer.disconnect();
+      }
+    });
+    
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [end]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+}
+
 export default function Home() {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
@@ -67,7 +138,8 @@ export default function Home() {
               src={`https://www.youtube.com/embed/${mediaRegistry.home.hero_video.split('v=')[1]?.split('&')[0]}?autoplay=1&mute=1&controls=0&loop=1&playlist=${mediaRegistry.home.hero_video.split('v=')[1]?.split('&')[0]}&showinfo=0&rel=0&modestbranding=1`}
               frameBorder="0"
               allow="autoplay; encrypted-media"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none', transform: 'scale(1.5)' }} // Scale to hide borders
+              style={{ width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none', transform: 'scale(1.5)' }}
+              title="Campus Aerial Background Video"
             />
           </motion.div>
         ) : (
@@ -86,42 +158,64 @@ export default function Home() {
         <div className={styles.maskOverlay}>
           <div className={styles.heroContent}>
             <motion.h1 
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+              transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
               className={styles.heroTitle}
             >
-              NIRMALA
+              Transforming Healthcare Education in Eastern India
             </motion.h1>
-            <motion.p 
-              initial={{ y: 50, opacity: 0 }}
+            <motion.div 
+              initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
-              className={styles.heroSubtitle}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              className={styles.heroActions}
             >
-              Transforming Healthcare Education
-            </motion.p>
+              <Link href="/institutes" className={styles.btnSecondaryHero}>Explore Institutes</Link>
+              <Link href="/apply" className={styles.btnPrimaryHero}>Apply Now 2025-26</Link>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 2. Kinetic Marquee Tape */}
-      <div className={styles.marqueeSection}>
-        <div className={styles.marqueeTrack}>
-          {Array(4).fill(0).map((_, i) => (
-            <React.Fragment key={i}>
-              <span className={styles.marqueeItem}><span>✦</span> 6 PREMIER INSTITUTIONS & 1 HOSPITAL</span>
-              <span className={styles.marqueeItem}><span>✦</span> NMC & INC APPROVED</span>
-              <span className={styles.marqueeItem}><span>✦</span> 605+ BEDDED HOSPITAL</span>
-              <span className={styles.marqueeItem}><span>✦</span> GERMANY COLLABORATION</span>
-            </React.Fragment>
+      {/* 2. Static Credentials Strip */}
+      <div className={styles.credentialsStrip}>
+        <div className={styles.credentialsContainer}>
+          {credentialsData.map((cred, idx) => (
+             <React.Fragment key={idx}>
+               <div className={styles.credentialItem}>
+                 <span className={styles.credentialIcon} aria-hidden="true">{cred.icon}</span>
+                 <span className={styles.credentialLabel}>{cred.label}</span>
+               </div>
+               {idx < credentialsData.length - 1 && <div className={styles.credentialDivider} />}
+             </React.Fragment>
           ))}
         </div>
       </div>
 
-      {/* 3. About Us & Global Collab (Animated Background) */}
+      {/* 3. Hero Stats Strip */}
+      <section className={styles.statsSection}>
+        <div className={styles.statsContainer}>
+          {statsData.map((stat, i) => (
+            <motion.div 
+              key={i} 
+              className={styles.statBlock}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <div className={styles.statNumber}>
+                <Counter end={stat.end} suffix={stat.suffix} />
+              </div>
+              <div className={styles.statLabel}>{stat.label}</div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. About Us & Global Collab */}
       <section className={styles.aboutSection}>
-        <div className={styles.movingGradientBg} />
         <div className={styles.aboutGrid}>
           <div className={styles.aboutText}>
             <motion.h2 
@@ -135,8 +229,11 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              Established in 2017, Nirmala Foundation is a registered charitable trust founded to uplift society through quality education. In just a few years, it has grown into a comprehensive healthcare education ecosystem comprising 6 institutes and a 605-bedded super specialty hospital, serving over 4,500+ students across 6 cities.
+              Established in 2017, Nirmala Foundation is a registered charitable trust (Reg. Pending) founded to uplift society through quality education. In just a few years, it has grown into a comprehensive healthcare education ecosystem comprising 6 institutes and a super specialty hospital across 6 cities.
             </motion.p>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+              <Link href="/about" className={styles.textLink}>Read Our Full Story →</Link>
+            </motion.div>
           </div>
           
           <motion.div 
@@ -146,13 +243,15 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, type: "spring" }}
           >
+            <div className={styles.collabIcon}>🌍</div>
             <h3>Global Academic Collaboration</h3>
             <p>We possess strong connections with global institutions, including a strategic MoU with <strong>Future Nurses, Germany</strong> signed by Prof. Dirk U. Naumann. This Indo-German academic partnership facilitates robust training, exchange programs, and ensures our students access world-class healthcare resources.</p>
+            <Link href="/about#global" className={styles.collabBtn}>View Partnership Details</Link>
           </motion.div>
         </div>
       </section>
 
-      {/* 4. Sticky Overlapping Parallax Divisions with Real Data Routes */}
+      {/* 5. Sticky Overlapping Parallax Divisions */}
       <section className={styles.divisionsSection}>
         <div className={styles.stickyParent}>
           {divisionStruct.map((div, i) => (
@@ -191,14 +290,66 @@ export default function Home() {
               </div>
               <div className={styles.panelImage}>
                 <div className={styles.panelImageOverlay} />
-                <video autoPlay loop muted playsInline src={div.video} />
+                <video autoPlay loop muted playsInline src={div.video} title={`${div.tag} Background Video`} />
               </div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* 5. Strategic Roadmap (NEP 2020 & University Transition) */}
+      {/* 6. Accreditations Trust Bar */}
+      <section className={styles.accreditationsSection}>
+        <div className={styles.accredContainer}>
+          <div className={styles.accredHeader}>
+            <span className={styles.metaTag}>Excellence</span>
+            <h2>Recognized & Accredited</h2>
+          </div>
+          <div className={styles.accredGrid}>
+             <div className={styles.accredBadge}>
+               <div className={styles.badgePlaceholder}>NMC</div>
+               <p>National Medical Commission</p>
+             </div>
+             <div className={styles.accredBadge}>
+               <div className={styles.badgePlaceholder}>INC</div>
+               <p>Indian Nursing Council</p>
+             </div>
+             <div className={styles.accredBadge}>
+               <div className={styles.badgePlaceholder}>PCI</div>
+               <p>Pharmacy Council of India</p>
+             </div>
+             <div className={styles.accredBadge}>
+               <div className={styles.badgePlaceholder}>WBUHS</div>
+               <p>West Bengal University of Health Sciences</p>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Testimonials */}
+      <section className={styles.testimonialsSection}>
+         <div className={styles.testimoContainer}>
+           <div className={styles.testimoHeader}>
+              <h2>Student Voices</h2>
+              <p>Hear from the next generation of healthcare leaders.</p>
+           </div>
+           <div className={styles.testimoGrid}>
+              {testimonialsData.map((test, i) => (
+                 <div key={i} className={styles.testimoCard}>
+                   <div className={styles.testimoQuote}>"{test.quote}"</div>
+                   <div className={styles.testimoAuthorBox}>
+                     <img src={test.image} alt={test.author} className={styles.authorImg} />
+                     <div>
+                       <div className={styles.authorName}>{test.author}</div>
+                       <div className={styles.authorMeta}>{test.program} • Class of {test.batch}</div>
+                     </div>
+                   </div>
+                 </div>
+              ))}
+           </div>
+         </div>
+      </section>
+
+      {/* 8. Strategic Roadmap */}
       <section className={styles.roadmapSection}>
         <div className={styles.roadmapHeader}>
           <motion.span
@@ -228,6 +379,15 @@ export default function Home() {
               <p>{item.description}</p>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* 9. Bottom CTA */}
+      <section className={styles.bottomCtaSection}>
+        <div className={styles.bottomCtaContent}>
+           <h2>Your Healthcare Career Begins Here</h2>
+           <p>Applications are now open for the 2025–26 academic session across all our premier institutes.</p>
+           <Link href="/apply" className={styles.ctaBannerBtn}>Apply Now</Link>
         </div>
       </section>
 
