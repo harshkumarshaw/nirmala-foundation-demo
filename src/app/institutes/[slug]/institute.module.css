@@ -287,6 +287,28 @@
   font-weight: 700;
 }
 
+.miniGallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.galleryImage {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.galleryImage:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
 .viewDocLink {
   display: block;
   margin-top: 1rem;

@@ -175,8 +175,12 @@ export default function RootLayout({
                 <li>Kalyani, Nadia, West Bengal</li>
                 <li><a href="mailto:info@nirmalafoundation.co.in">info@nirmalafoundation.co.in</a></li>
                 <li>
-                  <a href="tel:+918000000000">+91 80000 00000</a><br/>
-                  <a href="https://wa.me/918000000000" style={{ color: '#25D366', fontSize: '0.9rem' }}>Chat on WhatsApp</a>
+                  <a href="tel:+919831050222">+91 98310 50222</a><br/>
+                  <a href="https://wa.me/919831050222" style={{ color: '#25D366', fontSize: '0.9rem' }}>Chat on WhatsApp</a>
+                </li>
+                <li style={{ fontSize: '0.8rem', opacity: 0.8, marginTop: '1rem' }}>
+                  Registered Trust: IV-190300267/2017 (West Bengal)<br/>
+                  PAN & Accreditation Verified
                 </li>
 
                 <li><Link href="/nirf" style={{ fontSize: '0.8rem' }}>NIRF Disclosure</Link></li>
@@ -189,7 +193,7 @@ export default function RootLayout({
 
         {/* Mobile Sticky CTA */}
         <div className="mobile-cta-bar">
-          <a href="tel:+918000000000" className="mobile-cta-phone" aria-label="Call Us">
+          <a href="tel:+919831050222" className="mobile-cta-phone" aria-label="Call Us">
              <span>📞</span> Call Us
           </a>
           <Link href="/apply" className="mobile-cta-btn" aria-label="Apply Now">

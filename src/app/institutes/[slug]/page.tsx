@@ -214,6 +214,21 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
             </div>
           </motion.div>
 
+          {/* New Image Gallery */}
+          <motion.div 
+            className={styles.sideBox}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3>Campus Gallery</h3>
+            <div className={styles.miniGallery}>
+               {institute.images.slice(0, 6).map((img, i) => (
+                  <div key={i} className={styles.galleryImage} style={{ background: `url(${img}) center/cover` }} />
+               ))}
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

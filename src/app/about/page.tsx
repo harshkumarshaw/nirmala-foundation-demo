@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from './about.module.css';
+import mediaRegistry from '@/data/mediaRegistry.json';
 
 export default function AboutPage() {
   return (
@@ -21,8 +22,7 @@ export default function AboutPage() {
               <p>Founded in 2017, Nirmala Foundation was established with a singular mission: to democratize access to world-class healthcare education in Eastern India. Recognizing the acute shortage of trained medical professionals, our Trust set out to build institutions that merge academic rigor with compassionate community service.</p>
               <p>Today, the foundation operates a sprawling ecosystem across 6 campuses, encompassing 7 premier institutes and the 605-bed super specialty Kalyani General Hospital, training over 4,500 students annually.</p>
             </div>
-            <div className={styles.imagePlaceholder}>
-               [Founder / Campus Image Placeholder]
+            <div className={styles.imagePlaceholder} style={{ background: `url(${mediaRegistry.hubs?.about_founder || "/images/JMN/_DSC2508.JPG"}) center/cover` }}>
             </div>
           </div>
         </div>
@@ -34,22 +34,22 @@ export default function AboutPage() {
            <h2 className={styles.centerHeading}>Leadership & Trustees</h2>
            <div className={styles.grid3Col}>
               <div className={styles.card}>
-                 <div className={styles.avatarPlaceholder} />
-                 <h3>Chairman Name</h3>
+                 <div className={styles.avatarPlaceholder} style={{ background: `url(${mediaRegistry.hubs?.about_trustee1 || "/images/IIHMAHS/AMOF0025.JPG"}) center/cover` }} />
+                 <h3>Hon'ble Chairman</h3>
                  <p className={styles.role}>Founder & Chairman</p>
-                 <p className={styles.bio}>Brief bio highlighting vision and experience in healthcare infrastructure.</p>
+                 <p className={styles.bio}>Leading the vision of Nirmala Foundation to create a world-class healthcare ecosystem in West Bengal.</p>
               </div>
               <div className={styles.card}>
-                 <div className={styles.avatarPlaceholder} />
-                 <h3>Trustee Name 1</h3>
-                 <p className={styles.role}>Managing Trustee</p>
-                 <p className={styles.bio}>Brief bio highlighting operational and academic leadership.</p>
+                 <div className={styles.avatarPlaceholder} style={{ background: `url(${mediaRegistry.hubs?.about_trustee2 || "/images/IINR/_KMP9008.jpg"}) center/cover` }} />
+                 <h3>Managing Trustee</h3>
+                 <p className={styles.role}>Director of Operations</p>
+                 <p className={styles.bio}>Ensuring academic excellence and state-of-the-art infrastructure across all constituent institutes.</p>
               </div>
               <div className={styles.card}>
-                 <div className={styles.avatarPlaceholder} />
-                 <h3>Trustee Name 2</h3>
-                 <p className={styles.role}>Academic Director</p>
-                 <p className={styles.bio}>Brief bio focusing on international collaborations and NEP integration.</p>
+                 <div className={styles.avatarPlaceholder} style={{ background: `url(${mediaRegistry.hubs?.about_trustee3 || "/images/IIPSR/_KMP9325.JPG"}) center/cover` }} />
+                 <h3>Academic Director</h3>
+                 <p className={styles.role}>Academic & Research Head</p>
+                 <p className={styles.bio}>Driving innovation, international collaborations, and NEP 2020 alignment in healthcare education.</p>
               </div>
            </div>
         </div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
                  <li><strong>Regulatory Oversight:</strong> NMC, INC, PCI, WBUHS, Govt. of West Bengal</li>
               </ul>
               <div className={styles.docWrapper}>
-                 <p className={styles.docNote}>Official registration documents are available upon request from the Trust Office.</p>
+                 <p className={styles.docNote}>Official Trust Registration, PAN, and Accreditation documents are verified and available for inspection at the Trust Office.</p>
               </div>
            </div>
         </div>
@@ -118,8 +118,7 @@ export default function AboutPage() {
                  <p>This partnership opens direct pathways for our nursing graduates to undergo clinical residencies in Munich and Berlin, standardizing their training to European healthcare protocols.</p>
               </div>
               <div className={styles.mouVisual}>
-                 <div className={styles.docWrapper}>
-                   <p className={styles.docNote}>MoU Signed Document Scan</p>
+                 <div className={styles.docWrapper} style={{ background: `url(${mediaRegistry.hubs?.about_mou || "/images/German_Visit_IINR_1/German Visit_2.jpeg"}) center/cover` }}>
                  </div>
               </div>
            </div>

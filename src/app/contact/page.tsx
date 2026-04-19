@@ -77,7 +77,7 @@ export default function ContactPage() {
                 </div>
                 <p>Nirmala Foundation Campus, Phase-II, Kalyani Industrial Estate, Nadia, West Bengal - 741235</p>
                 <div className={styles.officeDetails}>
-                  <span><Phone size={16} /> +91 90000 00000</span>
+                  <span><Phone size={16} /> +91 98310 50222</span>
                   <span><Mail size={16} /> info@nirmalafoundation.co.in</span>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                 </div>
                 <p>11, Dr. Biresh Guha Street, Park Circus, Kolkata, West Bengal - 700017</p>
                 <div className={styles.officeDetails}>
-                  <span><Phone size={16} /> +91 90000 00001</span>
+                  <span><Phone size={16} /> +033 4004 0555</span>
                   <span><Mail size={16} /> kolkata@nirmalafoundation.co.in</span>
                 </div>
               </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 </div>
                 <p>Nabapally, Barasat, North 24 Parganas, Kolkata - 700126</p>
                 <div className={styles.officeDetails}>
-                  <span><Phone size={16} /> +91 90000 00002</span>
+                  <span><Phone size={16} /> +91 98310 50223</span>
                   <span><Mail size={16} /> barasat@nirmalafoundation.co.in</span>
                 </div>
               </div>
