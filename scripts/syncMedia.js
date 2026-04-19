@@ -44,6 +44,9 @@ function syncMedia() {
       if (slug === "jmn medical") slug = "jmn";
       if (!registry.institutes[slug]) registry.institutes[slug] = { video: "", images: [] };
       registry.institutes[slug].video = link;
+    } else if (position.startsWith("About ")) {
+      const key = position.toLowerCase().replace(/ /g, "_");
+      registry.hubs[key] = link;
     } else if (position.includes(" Img ")) {
       const [slugRaw, num] = position.split(" Img ");
       let slug = slugRaw.toLowerCase().trim();

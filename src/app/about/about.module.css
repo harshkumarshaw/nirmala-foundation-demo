@@ -165,7 +165,86 @@
   letter-spacing: 0.05em;
 }
 
-/* 5. Leadership */
+/* 5. Founder Spotlight */
+.founderBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.founderImageSlot {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-main);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.founderImageSlot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founderPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-muted);
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.founderPlaceholder span {
+  font-size: 1.5rem;
+}
+
+.founderText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.founderTag {
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+
+.founderText h2 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.founderQuote {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.founderText p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* 6. Leadership */
 .grid3Col {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -178,6 +257,16 @@
   border-radius: var(--radius-lg);
   box-shadow: 0 4px 20px rgba(0,0,0,0.03);
   text-align: center;
+}
+
+.leaderPhoto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem auto;
+  border: 3px solid var(--accent-light);
+  display: block;
 }
 
 .avatarPlaceholder {
@@ -276,6 +365,47 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.2rem;
+}
+
+.legalDocsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.docImageSlot {
+  background: var(--bg-surface);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.docImageSlot img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.docImageSlot:hover img {
+  opacity: 1;
+}
+
+.docImageSlot span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  font-size: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .docWrapper {

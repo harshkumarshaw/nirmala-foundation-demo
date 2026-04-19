@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from './about.module.css';
+import mediaRegistry from '../../data/mediaRegistry.json';
 
 export default function AboutPage() {
   return (
@@ -78,29 +79,71 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. Leadership & Trustees */}
+      {/* 5. Founder Spotlight */}
+      <section className={styles.section} id="founder">
+        <div className={styles.container}>
+          <div className={styles.founderBlock}>
+            <div className={styles.founderImageSlot}>
+              {mediaRegistry.hubs?.about_founder ? (
+                <img src={mediaRegistry.hubs.about_founder} alt="Founder, Nirmala Foundation" />
+              ) : (
+                <div className={styles.founderPlaceholder}>
+                  <span>Founder Portrait</span>
+                  <p>Image will appear here</p>
+                </div>
+              )}
+            </div>
+            <div className={styles.founderText}>
+              <span className={styles.founderTag}>The Visionary</span>
+              <h2>Hon&apos;ble Chairman &amp; Founder</h2>
+              <blockquote className={styles.founderQuote}>
+                &ldquo;I did not choose this mission… I discovered it. And through many trials, many roles… I was shaped to serve within it — among many outstanding individuals of Nirmala.&rdquo;
+              </blockquote>
+              <p>&ldquo;Great institutions are not created by individuals… They are discovered by those willing to serve them. I did not choose this mission — I was chosen to carry it.&rdquo;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Leadership & Trustees */}
       <section className={`${styles.section} ${styles.bgAlt}`} id="leadership">
         <div className={styles.container}>
            <h2 className={styles.centerHeading}>Leadership &amp; Trustees</h2>
            <div className={styles.grid3Col}>
-              <div className={styles.card}>
-                 <div className={styles.avatarPlaceholder}><span>HC</span></div>
-                 <h3>Hon&apos;ble Chairman</h3>
-                 <p className={styles.role}>Founder &amp; Chairman</p>
-                 <p className={styles.bio}>&ldquo;I did not choose this mission… I discovered it. And through many trials, many roles… I was shaped to serve within it — among many outstanding individuals of Nirmala.&rdquo;</p>
-              </div>
-              <div className={styles.card}>
-                 <div className={styles.avatarPlaceholder}><span>MT</span></div>
-                 <h3>Managing Trustee</h3>
-                 <p className={styles.role}>Director of Operations</p>
-                 <p className={styles.bio}>&ldquo;Leadership at Nirmala is not assumed. It is shaped through responsibility, tested through service, and earned among a community of excellence.&rdquo;</p>
-              </div>
-              <div className={styles.card}>
-                 <div className={styles.avatarPlaceholder}><span>AD</span></div>
-                 <h3>Academic Director</h3>
-                 <p className={styles.role}>Academic &amp; Research Head</p>
-                 <p className={styles.bio}>&ldquo;Among many exceptional individuals at Nirmala, I was given the opportunity — not to lead above them, but to fit into a role where I could serve the mission best.&rdquo;</p>
-              </div>
+              {[
+                {
+                  initials: 'HC',
+                  image: mediaRegistry.hubs?.about_founder,
+                  name: "Hon'ble Chairman",
+                  role: 'Founder & Chairman',
+                  quote: '"I did not choose this mission… I discovered it. And through many trials, many roles… I was shaped to serve within it."'
+                },
+                {
+                  initials: 'MT',
+                  image: mediaRegistry.hubs?.about_trustee_1,
+                  name: 'Managing Trustee',
+                  role: 'Director of Operations',
+                  quote: '"Leadership at Nirmala is not assumed. It is shaped through responsibility, tested through service, and earned among a community of excellence."'
+                },
+                {
+                  initials: 'AD',
+                  image: mediaRegistry.hubs?.about_trustee_2,
+                  name: 'Academic Director',
+                  role: 'Academic & Research Head',
+                  quote: '"Among many exceptional individuals at Nirmala, I was given the opportunity — not to lead above them, but to fit into a role where I could serve the mission best."'
+                },
+              ].map((leader, i) => (
+                <div key={i} className={styles.card}>
+                  {leader.image ? (
+                    <img src={leader.image} alt={leader.name} className={styles.leaderPhoto} />
+                  ) : (
+                    <div className={styles.avatarPlaceholder}><span>{leader.initials}</span></div>
+                  )}
+                  <h3>{leader.name}</h3>
+                  <p className={styles.role}>{leader.role}</p>
+                  <p className={styles.bio}>{leader.quote}</p>
+                </div>
+              ))}
            </div>
         </div>
       </section>
@@ -133,8 +176,25 @@ export default function AboutPage() {
                  <li><strong>Governing Body:</strong> Board of Trustees, Nirmala Foundation</li>
                  <li><strong>Regulatory Oversight:</strong> NMC, INC, PCI, WBUHS, Govt. of West Bengal</li>
               </ul>
-              <div className={styles.docWrapper}>
-                 <p className={styles.docNote}>Official Trust Registration, PAN, and Accreditation documents are verified and available for inspection at the Trust Office.</p>
+              <div className={styles.legalDocsGrid}>
+                {[
+                  { key: 'about_trust_deed', label: 'Trust Registration' },
+                  { key: 'about_pan_card', label: 'PAN Card' },
+                  { key: 'about_registration', label: 'Official Registration' }
+                ].map((doc, idx) => {
+                  /* @ts-expect-error - Expected dynamic access */
+                  const imgUrl = mediaRegistry.hubs?.[doc.key];
+                  return imgUrl ? (
+                    <div key={idx} className={styles.docImageSlot}>
+                      <img src={imgUrl} alt={doc.label} />
+                      <span>{doc.label}</span>
+                    </div>
+                  ) : (
+                    <div key={idx} className={styles.docWrapper}>
+                      <p className={styles.docNote}>{doc.label} Pending</p>
+                    </div>
+                  );
+                })}
               </div>
            </div>
         </div>

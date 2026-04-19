@@ -10,7 +10,11 @@
   },
   "hubs": {
     "admissions_hero": "/images/KGH/_MG_1173.JPG",
-    "contact_hero": "/images/KGH/_MG_1194.JPG"
+    "contact_hero": "/images/KGH/_MG_1194.JPG",
+    "about_building": "/images/JMN/_DSC2508.JPG",
+    "about_campus_large": "/images/JMN/_DSC2922.JPG",
+    "about_hospital_large": "/images/KGH/_MG_1351.JPG",
+    "about_founder": "/images/"
   },
   "institutes": {
     "iihmahs": {
