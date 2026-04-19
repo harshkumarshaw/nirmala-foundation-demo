@@ -99,6 +99,17 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
+            
+            <div className="navItem">
+              About Us
+              <div className="dropdownMenu">
+                <Link href="/about" className="dropdownLink">Our Story</Link>
+                <Link href="/about#leadership" className="dropdownLink">Leadership</Link>
+                <Link href="/about#legal" className="dropdownLink">Trust Registration</Link>
+                <Link href="/gallery" className="dropdownLink">Gallery</Link>
+                <Link href="/career" className="dropdownLink">Careers</Link>
+              </div>
+            </div>
 
             {/* 3. Admissions Dropdown */}
             <div className="navItem">
