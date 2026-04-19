@@ -26,7 +26,7 @@ const institutesDataRaw = [
       "Focus on Health IT and Public Health Governance",
       "Nutrition and Dietetics specialized labs"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format",
       "https://images.unsplash.com/photo-1576091160399-112ba9d15819?auto=format",
@@ -58,7 +58,7 @@ const institutesDataRaw = [
       "Library with national/international research journals",
       "Dual affiliation: WBUHS and Technical Skill Council"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2015/10/28/1210-143977098_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format",
       "https://images.unsplash.com/photo-1584362142249-160fa8698583?auto=format",
@@ -90,7 +90,7 @@ const institutesDataRaw = [
       "Transportation fleets for community health postings",
       "Emphasis on pediatric-focused nursing leadership"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2017/03/20/8449-209292163_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1584433144859-1ec3fd65675e?auto=format",
       "https://images.unsplash.com/photo-1579154234436-3974d44a8576?auto=format"
@@ -121,7 +121,7 @@ const institutesDataRaw = [
       "Over 300+ OPD patients treated daily",
       "Integrated health management systems"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1587351021759-3e566b3db4f4?auto=format&fit=crop&w=1600&q=80",
       "https://images.unsplash.com/photo-1586773860418-d3b97976c669?auto=format",
@@ -155,7 +155,7 @@ const institutesDataRaw = [
       "Strong placement records in premier national healthcare groups",
       "Active Nursing Research Cell"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2020/09/13/49808-458438856_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format",
       "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format",
@@ -187,7 +187,7 @@ const institutesDataRaw = [
       "Fully equipped nutrition and anatomy laboratories",
       "Focus on comprehensive patient care philosophy"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2019/02/23/21617-319452308_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1562774053-701939374585?auto=format",
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format"
@@ -218,7 +218,7 @@ const institutesDataRaw = [
       "Board exam pass rate: 96% (2022-23 batch, Source: JMNMC Academic Office)",
       "Residential campus with global-standard hostels"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1562774053-701939374585?auto=format",
       "https://images.unsplash.com/photo-1584433144859-1ec3fd65675e?auto=format",
@@ -250,7 +250,7 @@ const institutesDataRaw = [
       "Pre-vocational and Vocational Training",
       "Safe, accessible, and child-friendly campus"
     ],
-    videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+    videoLink: "",
     images: [
       "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format",
       "https://images.unsplash.com/photo-1427504494785-319ce5156093?auto=format"
