@@ -22,7 +22,7 @@ export default function InstitutesPage() {
       {/* 1. Immersive Hero Section */}
       <section className={styles.hero}>
         <img 
-          src={mediaRegistry.hubs.about_campus_large || "/images/hero-default.jpg"} 
+          src={(mediaRegistry.hubs as any).admissions_hero || institutesData[0]?.images[0] || "/images/hero-default.jpg"} 
           alt="Nirmala Foundation Hub" 
           className={styles.heroBg} 
         />

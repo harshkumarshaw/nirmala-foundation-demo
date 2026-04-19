@@ -62,12 +62,24 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
       
       {/* 1. Immersive Media Hero */}
       <section ref={heroRef} className={styles.hero}>
-        <motion.img 
-          src={institute.images[0]} 
-          alt={institute.name}
-          className={styles.heroBg}
-          style={{ y, opacity }}
-        />
+        {institute.videoLink && (institute.videoLink.toLowerCase().endsWith('.mp4') || institute.videoLink.toLowerCase().endsWith('.webm')) ? (
+          <motion.video 
+            src={institute.videoLink}
+            autoPlay 
+            muted={true}
+            loop 
+            playsInline
+            className={styles.heroBg}
+            style={{ y, opacity } as any}
+          />
+        ) : (
+          <motion.img 
+            src={institute.images[0]} 
+            alt={institute.name}
+            className={styles.heroBg}
+            style={{ y, opacity }}
+          />
+        )}
         <div className={styles.heroGradient} />
         
         <motion.div 
