@@ -234,7 +234,7 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
               {institute.affiliations.map((aff, i) => <span key={i}>{aff}</span>)}
             </div>
             <div className={styles.accredDetail}>
-               <p>Regulatory Body: <strong>{institute.affiliations[0]}</strong></p>
+               <p>Regulatory Body: <strong>{institute.affiliations[1]}</strong></p>
                <p>Status: <span className={styles.statusGreen}>Approved</span></p>
             </div>
           </motion.div>
