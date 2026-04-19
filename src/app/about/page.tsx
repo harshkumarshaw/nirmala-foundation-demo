@@ -253,9 +253,13 @@ export default function AboutPage() {
                  <p className={styles.mouClosing}>We look forward to a meaningful and lasting collaboration.</p>
               </div>
               <div className={styles.mouVisual}>
-                 <div className={styles.docWrapper}>
-                   <p className={styles.docNote}>MoU Signed Collaboration</p>
-                 </div>
+                {mediaRegistry.hubs?.about_german_visit ? (
+                  <img src={mediaRegistry.hubs.about_german_visit} alt="MoU Signed Collaboration" className={styles.mouImage} />
+                ) : (
+                  <div className={styles.docWrapper}>
+                    <p className={styles.docNote}>MoU Signed Collaboration</p>
+                  </div>
+                )}
               </div>
            </div>
         </div>
