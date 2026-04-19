@@ -260,19 +260,19 @@ const institutesDataRaw = [
 
 export const strategicRoadmap = [
   {
-    phase: "Implementation (2025)",
-    goal: "NEP 2020 Academic Framework Integration",
-    description: "Launch the Academic Bank of Credits (ABC) portal for all nursing and pharmacy students. Expand the advanced High-Fidelity Simulation Lab across Kalyani and Barasat campuses for 500+ students."
+    phase: "Academic Integration (2025)",
+    goal: "NEP 2020 & Multidisciplinary Frameworks",
+    description: "Implementing multidisciplinary learning models across nursing, pharmacy, and medical programs. Extending vocational skill development initiatives to bridge community health needs with academic rigor."
   },
   {
     phase: "Global Horizons (2026-2027)",
-    goal: "European Clinical Exchange Programs",
-    description: "Activate the Future Nurses Germany MoU to send the first cohort of 50 GNM/B.Sc students to partner hospitals in Munich and Berlin for a 6-month clinical residency."
+    goal: "International Clinical Exchange",
+    description: "Activating the Future Nurses Germany MoU to establish European clinical residencies, standardizing Nirmala's healthcare training protocols to meet stringent global benchmarks."
   },
   {
-    phase: "Infrastructure (2028-2030)",
-    goal: "Nirmala Health City Development",
-    description: "Phase 1 construction of a new 500-bed oncology and cardiology block on the newly acquired 5-acre adjacent campus. Initial regulatory filings submitted to NMC."
+    phase: "Institutional Evolution (2028-2030)",
+    goal: "Nirmala Foundation University",
+    description: "Transitioning our comprehensive healthcare ecosystem into a unified, autonomous, degree-granting Health Sciences University to foster interdisciplinary research and elevate regional healthcare education."
   }
 ];
 
