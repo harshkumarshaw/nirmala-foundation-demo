@@ -279,9 +279,17 @@ export const strategicRoadmap = [
 // Hydrate Data from Media Registry
 export const institutesData = institutesDataRaw.map(inst => {
   const reg = (mediaRegistry.institutes as any)[inst.slug];
+  const mergedImages = [...(inst.images || [])];
+  
+  if (reg?.images && Array.isArray(reg.images)) {
+    reg.images.forEach((img: string, idx: number) => {
+      if (img) mergedImages[idx] = img;
+    });
+  }
+
   return {
     ...inst,
     videoLink: reg?.video || inst.videoLink,
-    images: reg?.images || inst.images
+    images: mergedImages
   };
 });
