@@ -6,13 +6,11 @@ Home Panel Management,Image,Healthcare Administration panel,/images/IIHMAHS/_DSC
 Home Panel Pharmacy,Image,Pharmacy panel background,/images/IIPSR/_KMP9301.JPG
 Admissions Hub Hero,Image,Main background for Admissions,/images/KGH/_MG_1173.JPG
 Contact Hub Hero,Image,Main background for Contact,/images/KGH/_MG_1194.JPG
-IIHMAHS Video,Image,Primary banner for Institute of Hospital Management,/images/IIHMAHS/_DSC6313.JPG
 IIHMAHS Img 1,Image,Campus view 1,/images/IIHMAHS/_DSC6334.JPG
 IIHMAHS Img 2,Image,Campus view 2,/images/IIHMAHS/AMOF0045.JPG
 IIHMAHS Img 3,Image,Campus view 3,/images/IIHMAHS/_DSC6340.JPG
 IIHMAHS Img 4,Image,Campus view 4,/images/IIHMAHS/AMOF0025.JPG
 IIHMAHS Img 5,Image,Campus view 5,/images/IIHMAHS/_DSC6315 copy.jpg
-IIPSR Video,Image,Primary banner for Pharmacy,/images/IIPSR/_KMP9301.JPG
 IIPSR Img 1,Image,Pharmacy Lab view 1,/images/IIPSR/_KMP9325.JPG
 IIPSR Img 2,Image,Pharmacy Lab view 2,/images/IIPSR/_KMP9409.JPG
 IIPSR Img 3,Image,Pharmacy Lab view 3,/images/IIPSR/_KMP9335.JPG
@@ -22,14 +20,12 @@ ICHFN Img 1,Image,Pediatric nursing view 1,/images/ICHFN/IMG_0786.JPG
 ICHFN Img 2,Image,Pediatric nursing view 2,/images/ICHFN/IMG_0799.JPG
 ICHFN Img 3,Image,Pediatric nursing view 3,/images/ICHFN/IMG_0772.JPG
 ICHFN Img 4,Image,Pediatric nursing view 4,/images/ICHFN/IMG_0776.JPG
-IINR Video,Image,Primary banner for Nursing,/images/IINR/_DSC6348.JPG
 IINR Img 1,Image,Nursing view 1,/images/IINR/_KMP9006.JPG
 IINR Img 2,Image,Nursing view 2,/images/IINR/_KMP9240.JPG
 IINR Img 3,Image,Nursing view 3,/images/IINR/_KMP9127.JPG
 IINR Img 4,Image,Nursing view 4,/images/IINR/_KMP9222.JPG
 IINR Img 5,Image,Nursing view 5,/images/IINR/_KMP9008.jpg
 JMN Medical Video,Image,Primary banner for JMN Medical College,/images/JMN/_DSC2508.JPG
-JMN Medical Img 1,Image,JMN Medical view 1,/images/JMN/_DSC2922.JPG
 JMN Medical Img 2,Image,JMN Medical view 2,/images/JMN/_DSC2946.JPG
 JMN Medical Img 3,Image,JMN Medical view 3,/images/JMN/_DSC2935.JPG
 JMN Medical Img 4,Image,JMN Medical view 4,/images/JMN/_DSC2938.JPG
@@ -38,26 +34,14 @@ CCNR Video,Image,Primary banner for Care & Cure Nursing,/images/CCNR/IMG_0442.JP
 CCNR Img 1,Image,CCNR view 1,/images/CCNR/IMG_0538.JPG
 CCNR Img 2,Image,CCNR view 2,/images/CCNR/IMG_0562.JPG
 CCNR Img 3,Image,CCNR view 3,/images/CCNR/IMG_0555.jpg
-KGH Video,Image,Primary banner for Kalyani General Hospital,/images/KGH/_MG_1173.JPG
 KGH Img 1,Image,KGH view 1,/images/KGH/_MG_1244.JPG
 KGH Img 2,Image,KGH view 2,/images/KGH/_MG_1322.JPG
 KGH Img 3,Image,KGH view 3,/images/KGH/_MG_1275.JPG
 KGH Img 4,Image,KGH view 4,/images/KGH/_MG_1291.JPG
 KGH Img 5,Image,KGH view 5,/images/KGH/_MG_1351.JPG
 MoU German Visit,Image,Signed MoU or delegation photo,/images/German_Visit_IINR_1/German_Visit_1.jpeg
-About Building,Image,Exterior view of admin building,/images/JMN/_DSC2508.JPG
-About Campus Large,Image,Wide landscape view of main campus,/images/JMN/_DSC2922.JPG
-About Hospital Large,Image,Wide view of KGH construction/exterior,/images/KGH/_MG_1351.JPG
 About Founder,Image,Chairman/Founder Official Portrait,/images/About/Trustee_Main.jpeg
 About Trustee 1,Image,Managing Trustee Portrait,
-About Trustee 2,Image,Academic Director Portrait,
-About Trustee 3,Image,Executive Director Portrait,
-About Trust Deed,Image,Scan of official trust deed,
-About PAN Card,Image,Scan of official PAN card,
-About Registration,Image,Scan of official registration,
-ISER Video,Image,Primary banner for ISER,/images/JMN/_DSC2508.JPG
-ISER Img 1,Image,ISER view 1,/images/IINR/_DSC6348.JPG
-ISER Img 2,Image,ISER view 2,/images/IIHMAHS/_DSC6313.JPG
 
 CCNR Img 4,Image,Extra Image,/images/CCNR/IMG_0444.JPG
 CCNR Img 5,Image,Extra Image,/images/CCNR/IMG_0457.JPG
@@ -67,7 +51,6 @@ CCNR Img 8,Image,Extra Image,/images/CCNR/IMG_0521.JPG
 CCNR Img 9,Image,Extra Image,/images/CCNR/IMG_0530.JPG
 CCNR Img 10,Image,Extra Image,/images/CCNR/IMG_0545.JPG
 CCNR Img 11,Image,Extra Image,/images/CCNR/IMG_0549.JPG
-IINR Img 6,Image,Extra Image,/images/German_Visit_IINR_1/German_Visit_1.jpeg
 IINR Img 7,Image,Extra Image,/images/German_Visit_IINR_1/German_Visit_2.jpeg
 IINR Img 8,Image,Extra Image,/images/German_Visit_IINR_1/German_Visit_3.jpeg
 IINR Img 9,Image,Extra Image,/images/German_Visit_IINR_1/German_Visit_4.jpeg

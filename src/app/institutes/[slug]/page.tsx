@@ -238,7 +238,7 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
             <h3>Campus Gallery</h3>
             <div className={styles.miniGallery}>
                {institute.images.map((img, i) => (
-                  <div key={i} className={styles.galleryImage} style={{ background: `url(${img}) center/cover` }} />
+                  <img key={i} src={img} alt={`Gallery Image ${i + 1}`} className={styles.galleryImage} loading="lazy" />
                ))}
             </div>
           </motion.div>
