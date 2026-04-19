@@ -136,11 +136,11 @@ const institutesDataRaw = [
     location: "Kalyani, Nadia",
     description: "West Bengal's 1st NAAC Accredited Nursing College. A premier institution providing specialized B.Sc. and Post Basic Nursing programs with a focus on clinical research.",
     isNaac: true,
-    programs: ["B.Sc. Nursing", "Post Basic B. Sc. (Nursing)", "M. Sc. (Nursing)"],
+    programs: ["B.Sc. Nursing", "GNM Nursing", "Post Basic B. Sc. (Nursing)", "M. Sc. (Nursing)"],
     affiliations: ["NAAC", "INC", "WBUHS", "WBNC", "Govt. of West Bengal"],
     fullStory: "The International Institute of Nursing & Research (IINR) holds the distinct honor of being the 1st Nursing College in West Bengal to receive NAAC Accreditation. This milestone underscores our commitment to maintaining the highest benchmarks of quality in nursing education. Spread across a dedicated 5-acre campus in Kalyani, IINR combines advanced academic blocks with high-fidelity simulation labs to produce nurses who are not just clinicians, but researchers. Our curriculum is designed to lead the nursing profession towards a newer paradigm of evidence-based practice and leadership.",
     admissionsProcess: "Follows strict WBUHS and INC guidelines. Candidates are selected based on academic performance and JENPAS/WBJEE scores for B.Sc. Nursing.",
-    eligibilityCriteria: "For B.Sc. Nursing: 10+2 with Science (PCB) and English. For Post Basic B.Sc. Nursing: GNM qualification from a recognized board. For M.Sc. Nursing: B.Sc. Nursing/B.Sc. Hons. Nursing/Post Basic B.Sc. Nursing with minimum 55% aggregate marks and 1-year experience.",
+    eligibilityCriteria: "For B.Sc. Nursing: 10+2 with Science (PCB) and English. For GNM: 10+2 in any stream (Science/Commerce/Arts) with minimum 40%. For Post Basic B.Sc. Nursing: GNM qualification from a recognized board. For M.Sc. Nursing: B.Sc. Nursing/B.Sc. Hons. Nursing/Post Basic B.Sc. Nursing with minimum 55% aggregate marks and 1-year experience.",
     contactDetails: {
       address: "Plot A-2, Kalyani Industrial Estate, Nadia, West Bengal",
       phone: "+91 80000 00000",
