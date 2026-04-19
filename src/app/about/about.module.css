@@ -540,6 +540,11 @@
 .mouVisual .docNote {
   color: rgba(255,255,255,0.5);
 }
+.mouImages {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
 .mouImage {
   width: 100%;
