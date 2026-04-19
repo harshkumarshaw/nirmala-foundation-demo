@@ -81,9 +81,18 @@ export default function RootLayout({
                   </div>
                   <div className="dropdownCol">
                     <span className="colTitle">Nursing</span>
-                    <Link href="/institutes/iinr" className="dropdownLink">B.Sc. Nursing</Link>
+                    <div className="navSubGroup">
+                      <span className="subTitle">B.Sc. Nursing</span>
+                      <Link href="/institutes/iinr" className="dropdownLink">Kalyani Campus (IINR)</Link>
+                      <Link href="/institutes/ichfn" className="dropdownLink">Kolkata Campus (ICHFN)</Link>
+                    </div>
+                    <div className="navSubGroup">
+                      <span className="subTitle">GNM Nursing</span>
+                      <Link href="/institutes/iinr" className="dropdownLink">Kalyani (IINR)</Link>
+                      <Link href="/institutes/ccnr" className="dropdownLink">Barasat (CCNI)</Link>
+                      <Link href="/institutes/ichfn" className="dropdownLink">Park Circus (ICHFN)</Link>
+                    </div>
                     <Link href="/institutes/iinr" className="dropdownLink">Post Basic B.Sc. Nursing</Link>
-                    <Link href="/institutes/iinr" className="dropdownLink">GNM Nursing</Link>
                     <Link href="/institutes/iinr" className="dropdownLink">M.Sc. Nursing</Link>
                   </div>
                   <div className="dropdownCol">

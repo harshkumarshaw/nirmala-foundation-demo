@@ -91,12 +91,25 @@ export default function MobileNav() {
             </button>
             {openSection === "programs" && (
               <div className="mobileSectionLinks">
-                <Link href="/institutes/jmn" onClick={closeMenu}>MBBS (Medical)</Link>
-                <Link href="/institutes/iinr" onClick={closeMenu}>B.Sc. Nursing</Link>
+                <Link href="/institutes/jmn" onClick={closeMenu}>MBBS — Chakdaha Campus</Link>
+                
+                <div className="mobileSubGroup">
+                  <span className="mobileSubTitle">B.Sc. Nursing</span>
+                  <Link href="/institutes/iinr" onClick={closeMenu}>Kalyani (IINR)</Link>
+                  <Link href="/institutes/ichfn" onClick={closeMenu}>Park Circus (ICHFN)</Link>
+                </div>
+
+                <div className="mobileSubGroup">
+                  <span className="mobileSubTitle">GNM Nursing</span>
+                  <Link href="/institutes/iinr" onClick={closeMenu}>Kalyani (IINR)</Link>
+                  <Link href="/institutes/ccnr" onClick={closeMenu}>Barasat (CCNI)</Link>
+                  <Link href="/institutes/ichfn" onClick={closeMenu}>Park Circus (ICHFN)</Link>
+                </div>
+
                 <Link href="/institutes/iinr" onClick={closeMenu}>Post Basic B.Sc. Nursing</Link>
-                <Link href="/institutes/iinr" onClick={closeMenu}>GNM Nursing</Link>
-                <Link href="/institutes/iipsr" onClick={closeMenu}>B.Pharm / D.Pharm</Link>
-                <Link href="/institutes/iihmahs" onClick={closeMenu}>BHA / MHA (Admin)</Link>
+                <Link href="/institutes/iinr" onClick={closeMenu}>M.Sc. Nursing</Link>
+                <Link href="/institutes/iipsr" onClick={closeMenu}>B.Pharm / D.Pharm (Kalyani)</Link>
+                <Link href="/institutes/iihmahs" onClick={closeMenu}>BHA / MHA (Kalyani)</Link>
               </div>
             )}
           </div>
