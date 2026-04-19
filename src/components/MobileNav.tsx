@@ -111,9 +111,10 @@ export default function MobileNav() {
                 <Link href="/institutes/iipsr" onClick={closeMenu}>B.Pharm / D.Pharm (Kalyani)</Link>
                 <Link href="/institutes/iihmahs" onClick={closeMenu}>BHA / MHA (Kalyani)</Link>
                 <div className="mobileSubGroup">
-                  <span className="mobileSubTitle">Special Education</span>
-                  <Link href="/institutes/iser" onClick={closeMenu}>B.Ed. Special Education</Link>
-                  <Link href="/institutes/iser" onClick={closeMenu}>D.Ed. Special Education</Link>
+                  <span className="mobileSubTitle">Special Ed (For Children)</span>
+                  <Link href="/institutes/iser" onClick={closeMenu}>Early Intervention</Link>
+                  <Link href="/institutes/iser" onClick={closeMenu}>Special Education</Link>
+                  <Link href="/institutes/iser" onClick={closeMenu}>Vocational Training</Link>
                 </div>
               </div>
             )}

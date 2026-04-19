@@ -78,9 +78,10 @@ export default function ApplyPage() {
                     <option value="mha">MHA (Master of Hospital Admin)</option>
                     <option value="msc-nutrition">M.Sc. Applied Nutrition</option>
                   </optgroup>
-                  <optgroup label="Special Education">
-                    <option value="bed-special">B.Ed. Special Education</option>
-                    <option value="ded-special">D.Ed. Special Education</option>
+                  <optgroup label="Special Education (For Children)">
+                    <option value="early-intervention">Consultation: Early Intervention</option>
+                    <option value="special-schooling">Admission: Special Education Schooling</option>
+                    <option value="vocational-training">Enrollment: Pre-vocational & Vocational Training</option>
                   </optgroup>
                 </select>
               </div>

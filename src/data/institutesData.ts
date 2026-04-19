@@ -231,24 +231,24 @@ const institutesDataRaw = [
     shortName: "ISER",
     established: "2021",
     location: "Kalyani, Nadia",
-    description: "Dedicated to training educators and professionals in special education to empower individuals with diverse needs.",
-    programs: ["B.Ed. Special Education", "D.Ed. Special Education"],
-    affiliations: ["RCI", "WBUHS", "Govt. of West Bengal"],
-    fullStory: "The Institute of Special Education and Research (ISER) Kalyani was established to address the critical need for qualified professionals in the field of special education. Our comprehensive programs aim to build an inclusive society by equipping educators with specialized skills to support children and adults with intellectual disabilities, autism, and other diverse learning needs. ISER is committed to research-driven pedagogies and hands-on practical training in special schools and clinical settings.",
-    admissionsProcess: "Admissions follow the guidelines of the Rehabilitation Council of India (RCI) and the affiliating state universities. Candidates are selected based on academic merit and entrance examination scores.",
-    eligibilityCriteria: "For B.Ed. Special Education: Graduation in any discipline with a minimum of 50% marks. For D.Ed. Special Education: 10+2 in any stream with a minimum of 50% marks.",
+    description: "A dedicated learning academy and therapeutic facility providing specialized education and comprehensive care for specially abled children.",
+    programs: ["Early Intervention Program", "Special Education (Schooling)", "Vocational Training & Life Skills"],
+    affiliations: ["Govt. of West Bengal", "RCI Guidelines Compliant"],
+    fullStory: "The Institute of Special Education and Research (ISER) Kalyani is a specialized learning center dedicated to nurturing, educating, and empowering specially abled children. Unlike conventional academic institutions, ISER provides individualized therapeutic education, life-skills training, and compassionate care for children with diverse developmental and learning needs. Our multidisciplinary team of special educators, speech therapists, and occupational therapists work collaboratively with families to design individualized education plans (IEPs) that unlock the full potential of every child in a safe, inclusive environment.",
+    admissionsProcess: "Admissions are accepted year-round based on a comprehensive clinical and educational assessment. Parents/guardians are encouraged to schedule a direct consultation and campus visit to discuss the child's specific needs.",
+    eligibilityCriteria: "Open to specially abled children of various age groups. Final program placement is determined by developmental assessments and clinical recommendations.",
     contactDetails: {
       address: "Kalyani, Nadia, West Bengal",
       phone: "+91 80000 00000",
       email: "iser@nirmalafoundation.co.in",
-      office: "ISER Administrative Wing"
+      office: "ISER Admissions Desk"
     },
     features: [
-      "RCI Approved Curriculum",
-      "Specialized Resource Rooms and Labs",
-      "Extensive Practicum in Special Schools",
-      "Focus on Inclusive Education Strategies",
-      "Research and Development Wing"
+      "Individualized Education Plans (IEP)",
+      "Dedicated Occupational & Speech Therapy",
+      "Sensory Integration and Play Therapy Labs",
+      "Pre-vocational and Vocational Training",
+      "Safe, accessible, and child-friendly campus"
     ],
     videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
     images: [

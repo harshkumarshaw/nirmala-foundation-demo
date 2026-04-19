@@ -108,8 +108,9 @@ export default function RootLayout({
                   </div>
                   <div className="dropdownCol">
                     <span className="colTitle">Special Ed</span>
-                    <Link href="/institutes/iser" className="dropdownLink">B.Ed. Special Education</Link>
-                    <Link href="/institutes/iser" className="dropdownLink">D.Ed. Special Education</Link>
+                    <Link href="/institutes/iser" className="dropdownLink">Early Intervention</Link>
+                    <Link href="/institutes/iser" className="dropdownLink">Special Education</Link>
+                    <Link href="/institutes/iser" className="dropdownLink">Vocational Training</Link>
                   </div>
                 </div>
               </div>
