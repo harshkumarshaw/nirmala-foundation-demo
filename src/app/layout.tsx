@@ -82,6 +82,7 @@ export default function RootLayout({
                   <div className="dropdownCol">
                     <span className="colTitle">Nursing</span>
                     <Link href="/institutes/iinr" className="dropdownLink">B.Sc. Nursing</Link>
+                    <Link href="/institutes/iinr" className="dropdownLink">Post Basic B.Sc. Nursing</Link>
                     <Link href="/institutes/iinr" className="dropdownLink">GNM Nursing</Link>
                     <Link href="/institutes/iinr" className="dropdownLink">M.Sc. Nursing</Link>
                   </div>

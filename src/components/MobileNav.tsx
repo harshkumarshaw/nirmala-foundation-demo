@@ -93,6 +93,7 @@ export default function MobileNav() {
               <div className="mobileSectionLinks">
                 <Link href="/institutes/jmn" onClick={closeMenu}>MBBS (Medical)</Link>
                 <Link href="/institutes/iinr" onClick={closeMenu}>B.Sc. Nursing</Link>
+                <Link href="/institutes/iinr" onClick={closeMenu}>Post Basic B.Sc. Nursing</Link>
                 <Link href="/institutes/iinr" onClick={closeMenu}>GNM Nursing</Link>
                 <Link href="/institutes/iipsr" onClick={closeMenu}>B.Pharm / D.Pharm</Link>
                 <Link href="/institutes/iihmahs" onClick={closeMenu}>BHA / MHA (Admin)</Link>
