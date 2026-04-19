@@ -8,10 +8,49 @@ import { institutesData, strategicRoadmap } from "@/data/institutesData";
 import mediaRegistry from "@/data/mediaRegistry.json";
 
 const credentialsData = [
-  { icon: "🛡️", label: "NMC Approved" },
-  { icon: "🏥", label: "605-Bed Hospital" },
-  { icon: "🌍", label: "Germany MoU" },
-  { icon: "📜", label: "NAAC Accredited" }
+  { 
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ), 
+    label: "NMC Approved" 
+  },
+  { 
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/>
+        <path d="M9 22V12h6v10"/>
+        <path d="M2 9h20"/>
+        <path d="M12 2v4"/>
+        <path d="M7 2v4"/>
+        <path d="M17 2v4"/>
+      </svg>
+    ), 
+    label: "605-Bed Hospital" 
+  },
+  { 
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+        <path d="M2 12h20"/>
+      </svg>
+    ), 
+    label: "Germany MoU" 
+  },
+  { 
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+    ), 
+    label: "NAAC Accredited" 
+  }
 ];
 
 const statsData = [
@@ -225,7 +264,13 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, type: "spring" }}
           >
-            <div className={styles.collabIcon}>🌍</div>
+            <div className={styles.collabIcon}>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </div>
             <h3>Global Academic Collaboration</h3>
             <p>We possess strong connections with global institutions, including a strategic MoU with <strong>Future Nurses, Germany</strong> signed by Prof. Dirk U. Naumann. This Indo-German academic partnership facilitates robust training, exchange programs, and ensures our students access world-class healthcare resources.</p>
             <Link href="/about#global" className={styles.collabBtn}>View Partnership Details</Link>

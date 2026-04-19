@@ -101,42 +101,59 @@
 /* 2. Credentials Strip */
 .credentialsStrip {
   background-color: var(--bg-main);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  padding: 1.5rem 0;
+  padding: 0;
+  margin-top: -30px; /* pull into hero slightly */
+  position: relative;
+  z-index: 20;
 }
 
 .credentialsContainer {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 2rem;
+  padding: 1.25rem 2rem;
+  background: white;
+  border-radius: 100px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.03);
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .credentialItem {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.credentialItem:hover {
+  transform: translateY(-2px);
 }
 
 .credentialIcon {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  opacity: 0.85;
 }
 
 .credentialLabel {
   font-family: var(--font-sans);
   color: var(--text-secondary);
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .credentialDivider {
   width: 1px;
-  height: 24px;
-  background-color: rgba(0,0,0,0.1);
+  height: 20px;
+  background-color: rgba(0,0,0,0.08);
 }
 
 /* 3. Hero Stats Strip */
@@ -265,23 +282,31 @@
 .stickyPanel {
   position: sticky;
   top: 10vh;
-  margin-bottom: 4rem;
-  height: 80vh;
+  margin-bottom: 6rem;
+  min-height: 80vh;
+  max-height: 90vh;
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   background-color: var(--bg-surface);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
 }
 
 .panelContent {
-  flex: 1;
-  padding: 4rem;
+  flex: 1.2;
+  padding: 3rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+  position: relative;
+  overflow-y: auto; /* allow scroll if content exceeds max-height */
 }
+
+.panelMedical { background-color: var(--bg-main); }
+.panelNursing { background-color: var(--bg-surface); }
+.panelManagement { background-color: var(--bg-main); }
+.panelPharmacy { background-color: var(--bg-surface); }
 
 .panelImage {
   flex: 1;
@@ -302,28 +327,40 @@
 
 .panelTag {
   color: var(--accent);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.panelTag::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--accent);
+  opacity: 0.5;
 }
 
 .stickyPanel h2 {
   font-size: 3rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.1;
 }
 
 .institutesList {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .instituteRow {
   background: white;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   border-radius: var(--radius-md);
   box-shadow: 0 4px 12px rgba(0,0,0,0.02);
   border: 1px solid rgba(0,0,0,0.05);
@@ -399,30 +436,43 @@
 
 .accredBadge {
   background: white;
-  padding: 2rem;
-  border-radius: var(--radius-md);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+}
+
+.accredBadge:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  border-color: var(--accent-light);
 }
 
 .badgePlaceholder {
-  width: 80px;
-  height: 80px;
-  background-color: var(--accent-light);
-  color: var(--accent-hover);
+  width: 90px;
+  height: 90px;
+  background-color: var(--bg-surface);
+  color: var(--accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1.5rem auto;
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  border: 1px solid rgba(29, 158, 117, 0.1);
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.02);
 }
 
 .accredBadge p {
   color: var(--text-secondary);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
 }
 
 /* 7. Testimonials */
@@ -527,36 +577,37 @@
 }
 
 .roadCard {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: flex-start;
   background: white;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: var(--radius-md);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border-left: 4px solid var(--accent);
+  gap: 2rem;
 }
 
 .roadPhase {
-  flex-shrink: 0;
-  background: var(--accent-light);
-  color: var(--accent-hover);
-  padding: 0.5rem 1rem;
-  border-radius: 99px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-right: 2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .roadCard h3 {
-  font-size: 1.25rem;
-  margin: 0 2rem 0 0;
-  width: 250px;
+  font-size: 1.4rem;
+  margin: 0 0 0.75rem 0;
+  width: auto;
+  color: var(--primary);
 }
 
 .roadCard p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 0;
-  flex: 1;
+  line-height: 1.6;
 }
 
 /* 9. Bottom CTA */

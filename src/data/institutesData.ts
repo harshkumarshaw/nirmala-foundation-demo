@@ -196,8 +196,8 @@ const institutesDataRaw = [
   {
     slug: "jmn",
     name: "JMN Medical College",
-    shortName: "JMNMC",
-    established: "2020",
+    shortName: "JMNMCH",
+    established: "2022",
     location: "Chakdaha, Nadia",
     description: "The Foundation's premier medical institute and a 150 Seat MBBS College, featuring Eastern India's First Digital Cadaver Lab.",
     programs: ["MBBS (Bachelor of Medicine, Bachelor of Surgery)"],

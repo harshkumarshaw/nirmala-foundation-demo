@@ -226,7 +226,7 @@ export default function AboutPage() {
                 <p>International Institute of Pharmaceutical Science &amp; Research (Kalyani) and Care &amp; Cure Institute of Nursing &amp; Research (Barasat) established.</p>
              </div>
              <div className={styles.timelineBlock}>
-                <span className={styles.year}>2020</span>
+                <span className={styles.year}>2022</span>
                 <h4>JMN Medical College</h4>
                 <p>Launched the 150-seat flagship medical college in Chakdaha. True transformation does not follow tradition… it redefines it.</p>
              </div>
