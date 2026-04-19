@@ -402,8 +402,10 @@ export default function Home() {
               transition={{ duration: 0.6, delay: idx * 0.2 }}
             >
               <span className={styles.roadPhase}>{item.phase}</span>
-              <h3>{item.goal}</h3>
-              <p>{item.description}</p>
+              <div className={styles.roadContent}>
+                <h3>{item.goal}</h3>
+                <p>{item.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>

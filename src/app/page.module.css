@@ -600,6 +600,11 @@
   letter-spacing: 0.1em;
 }
 
+.roadContent {
+  display: flex;
+  flex-direction: column;
+}
+
 .roadCard h3 {
   font-size: 1.4rem;
   margin: 0 0 0.75rem 0;
@@ -669,9 +674,10 @@
 
 @media (max-width: 768px) {
   .aboutGrid { grid-template-columns: 1fr; gap: 2rem; }
-  .roadCard { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .roadPhase { margin-right: 0; margin-bottom: 0.5rem; }
-  .roadCard h3 { width: auto; margin-right: 0; margin-bottom: 0.5rem; }
+  .roadCard { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.5rem; }
+  .roadPhase { margin-bottom: 0.25rem; font-size: 0.85rem; }
+  .roadCard h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .roadCard p { font-size: 0.95rem; }
   .credentialsContainer { justify-content: center; }
   .credentialDivider { display: none; }
   .heroTitle { font-size: 2.5rem; }
