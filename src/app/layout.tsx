@@ -50,7 +50,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Google Analytics Placeholder */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
