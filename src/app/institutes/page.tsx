@@ -69,6 +69,11 @@ export default function InstitutesPage() {
                   <div className={styles.categoryBadge}>
                     {getCategory(inst.slug)}
                   </div>
+                  {(inst as any).isNaac && (
+                    <div className={styles.naacBadge}>
+                      NAAC ACCREDITED
+                    </div>
+                  )}
                   <div className={styles.estBadge}>
                     ESTD {inst.established}
                   </div>

@@ -95,6 +95,20 @@ export default function InstitutePage({ params }: { params: Promise<{ slug: stri
             {institute.description}
           </motion.h2>
 
+          {/* NAAC Achievement Highlight */}
+          {(institute as any).isNaac && (
+            <motion.div 
+              className={styles.naacHighlight}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className={styles.naacBadgeInner}>NAAC ACCREDITED</div>
+              <h4>A Legacy of Quality</h4>
+              <p>IINR holds the distinction of being the <strong>1st Nursing College in West Bengal</strong> to achieve NAAC Accreditation, setting a benchmark for excellence in the region.</p>
+            </motion.div>
+          )}
+
           {/* Deep Story Block */}
           <motion.div 
             className={styles.storyBlock}

@@ -11,7 +11,7 @@ const credentialsData = [
   { icon: "🛡️", label: "NMC Approved" },
   { icon: "🏥", label: "605-Bed Hospital" },
   { icon: "🌍", label: "Germany MoU" },
-  { icon: "🎓", label: "4,500+ Students" }
+  { icon: "📜", label: "NAAC Accredited" }
 ];
 
 const statsData = [

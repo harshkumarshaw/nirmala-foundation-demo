@@ -134,10 +134,11 @@ const institutesDataRaw = [
     shortName: "IINR",
     established: "2016",
     location: "Kalyani, Nadia",
-    description: "A premier nursing college in West Bengal (NAAC Accreditation Applied). Providing high-level B.Sc. and Post Basic Nursing programs in a dedicated 5-acre campus.",
+    description: "West Bengal's 1st NAAC Accredited Nursing College. A premier institution providing specialized B.Sc. and Post Basic Nursing programs with a focus on clinical research.",
+    isNaac: true,
     programs: ["B.Sc. Nursing", "Post Basic B.Sc. Nursing"],
-    affiliations: ["INC", "WBUHS", "WBNC", "Govt. of West Bengal"],
-    fullStory: "The International Institute of Nursing & Research (IINR) is a premier nursing college in Kalyani, West Bengal, with NAAC accreditation currently in progress. Spread across a sprawling campus, it offers advanced nursing degrees that emphasize research-based clinical practice. IINR is equipped with high-fidelity simulation labs and extensive library resources. It focuses on developing professional nurses who are capable of leading healthcare teams and conducting independent clinical research, fully aligned with the global standards of nursing excellence.",
+    affiliations: ["NAAC", "INC", "WBUHS", "WBNC", "Govt. of West Bengal"],
+    fullStory: "The International Institute of Nursing & Research (IINR) holds the distinct honor of being the 1st Nursing College in West Bengal to receive NAAC Accreditation. This milestone underscores our commitment to maintaining the highest benchmarks of quality in nursing education. Spread across a dedicated 5-acre campus in Kalyani, IINR combines advanced academic blocks with high-fidelity simulation labs to produce nurses who are not just clinicians, but researchers. Our curriculum is designed to lead the nursing profession towards a newer paradigm of evidence-based practice and leadership.",
     admissionsProcess: "Follows strict WBUHS and INC guidelines. Candidates are selected based on academic performance and JENPAS/WBJEE scores for B.Sc. Nursing.",
     eligibilityCriteria: "For B.Sc. Nursing: 10+2 with Science (PCB) and English. For Post Basic B.Sc. Nursing: GNM qualification from a recognized board.",
     contactDetails: {
@@ -147,6 +148,7 @@ const institutesDataRaw = [
       office: "IINR Administrative Block"
     },
     features: [
+      "West Bengal's 1st NAAC Accredited Nursing College",
       "Modern 5-acre campus with residential facilities",
       "High-fidelity Nursing Simulation Lab",
       "Clinical training rotation at KGH and other partner hospitals",

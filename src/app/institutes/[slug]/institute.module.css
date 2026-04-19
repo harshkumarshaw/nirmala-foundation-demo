@@ -371,3 +371,53 @@
   .featureCard { padding: 1.5rem; }
   .sideBox { padding: 1.5rem; }
 }
+
+.naacHighlight {
+  background: linear-gradient(135deg, #fffcf0 0%, #fff8e1 100%);
+  border: 1px solid #ffd700;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.naacBadgeInner {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700, #b8860b);
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
+}
+
+.naacHighlight h4 {
+  font-family: var(--font-sans);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #5d4037;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.naacHighlight p {
+  font-size: 1.1rem;
+  color: #795548;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+.naacHighlight::after {
+  content: "★";
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  font-size: 8rem;
+  color: rgba(255, 215, 0, 0.1);
+  transform: rotate(15deg);
+  pointer-events: none;
+}
