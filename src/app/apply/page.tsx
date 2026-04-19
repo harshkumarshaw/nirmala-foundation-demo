@@ -78,6 +78,10 @@ export default function ApplyPage() {
                     <option value="mha">MHA (Master of Hospital Admin)</option>
                     <option value="msc-nutrition">M.Sc. Applied Nutrition</option>
                   </optgroup>
+                  <optgroup label="Special Education">
+                    <option value="bed-special">B.Ed. Special Education</option>
+                    <option value="ded-special">D.Ed. Special Education</option>
+                  </optgroup>
                 </select>
               </div>
               <div className={styles.formGroup}>

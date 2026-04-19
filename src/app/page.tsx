@@ -17,7 +17,7 @@ const credentialsData = [
 const statsData = [
   { end: 4500, suffix: "+", label: "Students Enrolled" },
   { end: 605, suffix: "", label: "Bed Super Specialty Hospital" },
-  { end: 7, suffix: "", label: "Institutions" },
+  { end: 8, suffix: "", label: "Institutions" },
   { end: 2017, suffix: "", label: "Established" }
 ];
 

@@ -224,6 +224,37 @@ const institutesDataRaw = [
       "https://images.unsplash.com/photo-1584433144859-1ec3fd65675e?auto=format",
       "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format"
     ]
+  },
+  {
+    slug: "iser",
+    name: "Institute of Special Education and Research",
+    shortName: "ISER",
+    established: "2021",
+    location: "Kalyani, Nadia",
+    description: "Dedicated to training educators and professionals in special education to empower individuals with diverse needs.",
+    programs: ["B.Ed. Special Education", "D.Ed. Special Education"],
+    affiliations: ["RCI", "WBUHS", "Govt. of West Bengal"],
+    fullStory: "The Institute of Special Education and Research (ISER) Kalyani was established to address the critical need for qualified professionals in the field of special education. Our comprehensive programs aim to build an inclusive society by equipping educators with specialized skills to support children and adults with intellectual disabilities, autism, and other diverse learning needs. ISER is committed to research-driven pedagogies and hands-on practical training in special schools and clinical settings.",
+    admissionsProcess: "Admissions follow the guidelines of the Rehabilitation Council of India (RCI) and the affiliating state universities. Candidates are selected based on academic merit and entrance examination scores.",
+    eligibilityCriteria: "For B.Ed. Special Education: Graduation in any discipline with a minimum of 50% marks. For D.Ed. Special Education: 10+2 in any stream with a minimum of 50% marks.",
+    contactDetails: {
+      address: "Kalyani, Nadia, West Bengal",
+      phone: "+91 80000 00000",
+      email: "iser@nirmalafoundation.co.in",
+      office: "ISER Administrative Wing"
+    },
+    features: [
+      "RCI Approved Curriculum",
+      "Specialized Resource Rooms and Labs",
+      "Extensive Practicum in Special Schools",
+      "Focus on Inclusive Education Strategies",
+      "Research and Development Wing"
+    ],
+    videoLink: "https://cdn.pixabay.com/video/2020/09/13/49816-458438881_large.mp4",
+    images: [
+      "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format",
+      "https://images.unsplash.com/photo-1427504494785-319ce5156093?auto=format"
+    ]
   }
 ];
 

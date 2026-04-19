@@ -106,6 +106,11 @@ export default function RootLayout({
                     <Link href="/institutes/iihmahs" className="dropdownLink">MHA (Admin)</Link>
                     <Link href="/institutes/iihmahs" className="dropdownLink">Applied Nutrition</Link>
                   </div>
+                  <div className="dropdownCol">
+                    <span className="colTitle">Special Ed</span>
+                    <Link href="/institutes/iser" className="dropdownLink">B.Ed. Special Education</Link>
+                    <Link href="/institutes/iser" className="dropdownLink">D.Ed. Special Education</Link>
+                  </div>
                 </div>
               </div>
             </div>
