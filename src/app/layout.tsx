@@ -102,7 +102,7 @@ export default function RootLayout({
                     <div className="navSubGroup">
                       <span className="subTitle">GNM Nursing</span>
                       <Link href="/institutes/iinr" className="dropdownLink">Kalyani (IINR)</Link>
-                      <Link href="/institutes/ccnr" className="dropdownLink">Barasat (CCNI)</Link>
+                      <Link href="/institutes/ccnr" className="dropdownLink">Barasat (CCNR)</Link>
                       <Link href="/institutes/ichfn" className="dropdownLink">Park Circus (ICHFN)</Link>
                     </div>
                     <Link href="/institutes/iinr" className="dropdownLink">Post Basic B.Sc. Nursing</Link>

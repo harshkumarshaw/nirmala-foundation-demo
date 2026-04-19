@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     kgh: `Kalyani General Hospital | 605-Bed Super Specialty | Nadia`,
     iihmahs: `IIHMAHS | Hospital Administration College | BHA MHA | Kalyani`,
     ichfn: `ICHFN | Nursing College Kolkata | B.Sc. GNM Programs`,
-    ccnr: `Care & Cure Nursing Institute | GNM Program | Barasat`,
+    ccnr: `Care & Cure Institute of Nursing & Research | GNM Program | Barasat`,
   }
 
   return {

@@ -102,7 +102,7 @@ export default function MobileNav() {
                 <div className="mobileSubGroup">
                   <span className="mobileSubTitle">GNM Nursing</span>
                   <Link href="/institutes/iinr" onClick={closeMenu}>Kalyani (IINR)</Link>
-                  <Link href="/institutes/ccnr" onClick={closeMenu}>Barasat (CCNI)</Link>
+                  <Link href="/institutes/ccnr" onClick={closeMenu}>Barasat (CCNR)</Link>
                   <Link href="/institutes/ichfn" onClick={closeMenu}>Park Circus (ICHFN)</Link>
                 </div>
 

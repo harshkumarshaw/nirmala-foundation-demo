@@ -164,21 +164,21 @@ const institutesDataRaw = [
   },
   {
     slug: "ccnr",
-    name: "Care & Cure Nursing Institute",
-    shortName: "CCNI",
+    name: "Care & Cure Institute of Nursing & Research",
+    shortName: "CCNR",
     established: "2018",
     location: "Barasat",
     description: "Specialized in GNM training and rural healthcare nursing initiatives, focusing on community health and primary care.",
     programs: ["GNM (General Nursing and Midwifery)"],
     affiliations: ["INC", "WBNC", "Govt. of West Bengal"],
-    fullStory: "Care & Cure Nursing Institute is dedicated to excellence in bedside nursing and community healthcare. Located in Barasat, it specializes in the 3-year GNM program. The institute prides itself on creating empathetic and clinically skilled nursing professionals who are ready to serve in both urban super-specialty settings and rural community health centers.",
+    fullStory: "Care & Cure Institute of Nursing & Research (CCNR) is dedicated to excellence in bedside nursing and community healthcare. Located in Barasat, it specializes in the 3-year GNM program. The institute prides itself on creating empathetic and clinically skilled nursing professionals who are ready to serve in both urban super-specialty settings and rural community health centers.",
     admissionsProcess: "Admissions are conducted through WBNC counseling. Meritorious candidates are eligible for West Bengal Student Credit Card support.",
     eligibilityCriteria: "10+2 in any stream from a recognized board with minimum aggregate requirements.",
     contactDetails: {
       address: "Phase-II, Kalyani industrial area near Phase-III crossing",
       phone: "+91 80000 00000",
       email: "ccnr@nirmalafoundation.co.in",
-      office: "Principal's Office, CCNI"
+      office: "Principal's Office, CCNR"
     },
     features: [
       "Specialized Community Health Nursing lab",

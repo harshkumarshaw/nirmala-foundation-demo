@@ -222,8 +222,8 @@ export default function AboutPage() {
              </div>
              <div className={styles.timelineBlock}>
                 <span className={styles.year}>2018</span>
-                <h4>IIPSR &amp; CCNI Launched</h4>
-                <p>International Institute of Pharmaceutical Science &amp; Research (Kalyani) and Care &amp; Cure Nursing Institute (Barasat) established.</p>
+                <h4>IIPSR &amp; CCNR Launched</h4>
+                <p>International Institute of Pharmaceutical Science &amp; Research (Kalyani) and Care &amp; Cure Institute of Nursing &amp; Research (Barasat) established.</p>
              </div>
              <div className={styles.timelineBlock}>
                 <span className={styles.year}>2020</span>
