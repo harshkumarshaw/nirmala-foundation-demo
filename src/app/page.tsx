@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import React, { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { institutesData, strategicRoadmap } from "@/data/institutesData";
+import mediaRegistry from "@/data/mediaRegistry.json";
 
 const credentialsData = [
   { icon: "🛡️", label: "NMC Approved" },
@@ -50,7 +51,7 @@ const divisionStruct = [
     tag: "Medical Sciences",
     title: "Physicians \nof Tomorrow",
     colorClass: styles.panelMedical,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba9d15819?auto=format&fit=crop&w=1200&q=80",
+    image: mediaRegistry.home.panels.medical || "https://images.unsplash.com/photo-1576091160399-112ba9d15819?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["jmn", "kgh"].includes(i.slug))
   },
   {
@@ -58,7 +59,7 @@ const divisionStruct = [
     tag: "Nursing Excellence",
     title: "Education \nThat Saves Lives",
     colorClass: styles.panelNursing,
-    image: "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&w=1200&q=80",
+    image: mediaRegistry.home.panels.nursing || "https://images.unsplash.com/photo-1576091160550-217359f42f8c?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["iinr", "ichfn", "ccnr"].includes(i.slug))
   },
   {
@@ -66,7 +67,7 @@ const divisionStruct = [
     tag: "Healthcare Administration",
     title: "Leaders in \nGovernance",
     colorClass: styles.panelManagement,
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    image: mediaRegistry.home.panels.management || "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["iihmahs"].includes(i.slug))
   },
   {
@@ -74,7 +75,7 @@ const divisionStruct = [
     tag: "Pharmaceutical Sciences",
     title: "Pioneering \nMedicines",
     colorClass: styles.panelPharmacy,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+    image: mediaRegistry.home.panels.pharmacy || "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
     institutes: institutesData.filter(i => ["iipsr"].includes(i.slug))
   }
 ];
@@ -129,7 +130,7 @@ export default function Home() {
       {/* 1. Hero Section */}
       <section ref={heroRef} className={styles.heroSection}>
         <motion.img 
-          src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80"
+          src={mediaRegistry.home.hero_video || "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80"}
           alt="Nirmala Foundation campus aerial view, Kalyani, West Bengal"
           className={styles.bgImage}
           style={{ y: videoY, opacity }}
