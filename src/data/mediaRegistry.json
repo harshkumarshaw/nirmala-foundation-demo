@@ -1,6 +1,6 @@
 {
   "home": {
-    "hero_video": "/images/JMN/_DSC2508.JPG",
+    "hero_video": "/images/JMN/JMNT.jpg",
     "panels": {
       "medical": "/images/JMN/_DSC2922.JPG",
       "nursing": "/images/IINR/_DSC6348.JPG",
@@ -14,7 +14,13 @@
     "about_building": "/images/JMN/_DSC2508.JPG",
     "about_campus_large": "/images/JMN/_DSC2922.JPG",
     "about_hospital_large": "/images/KGH/_MG_1351.JPG",
-    "about_founder": "/images/About/Trustee_Main.jpeg"
+    "about_founder": "/images/About/Trustee_Main.jpeg",
+    "about_trustee_1": "",
+    "about_trustee_2": "",
+    "about_trustee_3": "",
+    "about_trust_deed": "",
+    "about_pan_card": "",
+    "about_registration": ""
   },
   "institutes": {
     "iihmahs": {
