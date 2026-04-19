@@ -35,21 +35,25 @@ export default function AboutPage() {
         <div className={styles.container}>
           <h2 className={styles.centerHeading}>Our Story</h2>
           <div className={styles.storyContent}>
-            <p>Nirmala Foundation is a purpose-driven organization committed to creating meaningful change where it matters most. Rooted in compassion and guided by action, the foundation works to uplift underserved communities by focusing on education, healthcare, and sustainable development. Its mission is simple but powerful: to build a future where every individual has the opportunity to live with dignity, security, and hope.</p>
+            <p>Nirmala Foundation is built on purpose and action. We work hard to create real change where people need it most. Our focus is to uplift communities through better education, high-quality healthcare, and smart, sustainable development. Our goal is simple: to help every person live with dignity, security, and hope.</p>
 
-            <p>At the heart of Nirmala Foundation&apos;s work is a strong belief in grassroots impact. Rather than offering short-term solutions, the foundation invests in long-term change. It supports children through access to quality education, provides essential healthcare services in areas where resources are limited, and promotes livelihood programs that help families become self-reliant. Each initiative is designed to address real needs, with measurable and lasting results.</p>
+            <p>We deeply believe in grassroots impact. We don't just offer temporary fixes. Instead, we invest in building a long-term foundation for success.</p>
+            
+            <ul>
+              <li><strong>Education:</strong> We support children to get quality schooling.</li>
+              <li><strong>Healthcare:</strong> We deliver vital medical care to areas with limited resources.</li>
+              <li><strong>Livelihood:</strong> We create training programs that help families become self-reliant.</li>
+            </ul>
 
             <div className={styles.pullQuote}>
               &ldquo;We did not want to build buildings… We wanted to build a system that serves humanity.&rdquo;
             </div>
 
-            <p>What sets Nirmala Foundation apart is its people-first approach. The organization works closely with local communities, listening before acting. This ensures that every program is relevant, respectful, and effective. Volunteers, partners, and donors are not just supporters — they are part of a shared mission to create positive transformation.</p>
+            <p>What makes us different is our people-first approach. We listen closely to local communities before we take action. This ensures our programs are effective and respectful. Our volunteers, partners, and donors share this same mission for positive transformation.</p>
 
-            <p>Transparency and accountability are central to its operations. Every effort is backed by careful planning, responsible use of resources, and a commitment to measurable impact. Whether it is funding a child&apos;s education, organizing medical camps, or supporting women-led initiatives, the foundation ensures that every contribution leads to real change on the ground.</p>
+            <p>Transparency and deep accountability guide all our choices. We plan carefully and use our resources responsibly to ensure measurable impact. From funding a child's early education to organizing emergency medical camps, we make sure every donation leads to clear results on the ground.</p>
 
-            <p>Nirmala Foundation is more than an organization. It is a growing movement of people who believe that even small actions can create a ripple effect of goodness. With every life it touches, it moves closer to a more inclusive and compassionate society.</p>
-
-            <p className={styles.storyEmphasis}>If you are looking to be part of something meaningful, Nirmala Foundation offers that opportunity. Together, change is not just possible — it is already happening.</p>
+            <p className={styles.storyEmphasis}>If you want to be part of something meaningful, Nirmala Foundation gives you that chance. Together, change is not just a dream — it is already happening today.</p>
           </div>
         </div>
       </section>

@@ -1,10 +1,16 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Link from 'next/link'
 import { institutesData } from '@/data/institutesData'
 import MobileNav from '@/components/MobileNav'
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+}
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nirmala-foundation-demo.vercel.app'),
   title: 'Nirmala Foundation | Healthcare Education | Kalyani, West Bengal',
   description: 'Nirmala Foundation operates 7 premier healthcare education institutes and a 605-bed super specialty hospital in West Bengal. MBBS, Nursing, Pharmacy admissions open.',
   openGraph: {
@@ -46,6 +52,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics Placeholder */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config','G-XXXX');`
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

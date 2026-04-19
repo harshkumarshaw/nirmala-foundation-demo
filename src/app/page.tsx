@@ -319,7 +319,7 @@ export default function Home() {
                  <div key={i} className={styles.testimoCard}>
                    <div className={styles.testimoQuote}>"{test.quote}"</div>
                    <div className={styles.testimoAuthorBox}>
-                     <img src={test.image} alt={test.author} className={styles.authorImg} />
+                     <img src={test.image} alt={`Student testimonial from ${test.author}`} className={styles.authorImg} loading="lazy" />
                      <div>
                        <div className={styles.authorName}>{test.author}</div>
                        <div className={styles.authorMeta}>{test.program} • Class of {test.batch}</div>

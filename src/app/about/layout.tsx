@@ -1,17 +1,16 @@
-import type { Metadata } from 'next'
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Nirmala Foundation | Healthcare Education Trust | Kalyani, WB',
-  description: 'Learn about Nirmala Foundation — a registered charitable trust established in 2017, operating 7 healthcare education institutes and a 605-bed hospital in West Bengal.',
+  title: 'About Us – Nirmala Foundation',
+  description: 'Learn about Nirmala Foundation\'s mission and history. We are an education and healthcare NGO in West Bengal.',
   openGraph: {
     title: 'About Nirmala Foundation',
-    description: 'Registered charitable trust operating 7 healthcare education institutes and KGH hospital in West Bengal.',
+    description: 'Transforming healthcare and education in India.',
     url: 'https://nirmala-foundation-demo.vercel.app/about',
-    siteName: 'Nirmala Foundation',
     type: 'website',
   }
-}
+};
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return <>{children}</>;
 }
