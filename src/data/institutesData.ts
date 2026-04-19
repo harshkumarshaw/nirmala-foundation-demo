@@ -285,11 +285,20 @@ export const institutesData = institutesDataRaw.map(inst => {
     reg.images.forEach((img: string, idx: number) => {
       if (img) mergedImages[idx] = img;
     });
+
+    // If images[0] is still a placeholder (unsplash) or empty, 
+    // use the first real local image from the registry
+    if (!mergedImages[0] || mergedImages[0].includes('unsplash')) {
+      const firstReal = reg.images.find((img: string) => img && !img.includes('unsplash'));
+      if (firstReal) mergedImages[0] = firstReal;
+    }
   }
 
   return {
     ...inst,
-    videoLink: reg?.video || inst.videoLink,
+    videoLink: reg?.video && (reg.video.endsWith('.mp4') || reg.video.endsWith('.webm')) 
+      ? reg.video 
+      : inst.videoLink,
     images: mergedImages
   };
 });

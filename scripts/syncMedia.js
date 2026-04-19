@@ -48,11 +48,14 @@ function syncMedia() {
       const key = position.toLowerCase().replace(/ /g, "_");
       registry.hubs[key] = link;
     } else if (position.includes(" Img ")) {
-      const [slugRaw, num] = position.split(" Img ");
-      let slug = slugRaw.toLowerCase().trim();
+      const imgSplit = position.split(" Img ");
+      let slug = imgSplit[0].toLowerCase().trim();
+      const numStr = imgSplit[1]?.trim();
       if (slug === "jmn medical") slug = "jmn";
       if (!registry.institutes[slug]) registry.institutes[slug] = { video: "", images: [] };
-      const index = parseInt(num) - 1;
+      const num = parseInt(numStr);
+      // Img 0 → index 0, Img 1 → index 1, etc.
+      const index = isNaN(num) ? 0 : num;
       registry.institutes[slug].images[index] = link;
     }
   });

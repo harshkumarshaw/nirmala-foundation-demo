@@ -15,7 +15,7 @@ IIPSR Img 1,Image,Pharmacy Lab view 1,/images/IIPSR/_KMP9325.JPG
 IIPSR Img 2,Image,Pharmacy Lab view 2,/images/IIPSR/_KMP9409.JPG
 IIPSR Img 3,Image,Pharmacy Lab view 3,/images/IIPSR/_KMP9335.JPG
 IIPSR Img 4,Image,Pharmacy Lab view 4,/images/IIPSR/_KMP9337.JPG
-ICHFN Video,Image,Primary banner for Child Health Nursing,/images/ICHFN/IMG_0663.JPG
+ICHFN Img 0,Image,Primary banner for Child Health Nursing,/images/ICHFN/IMG_0663.JPG
 ICHFN Img 1,Image,Pediatric nursing view 1,/images/ICHFN/IMG_0776.JPG
 ICHFN Img 2,Image,Pediatric nursing view 2,/images/ICHFN/IMG_0799.JPG
 ICHFN Img 3,Image,Pediatric nursing view 3,/images/ICHFN/IMG_0772.JPG
@@ -25,7 +25,7 @@ IINR Img 2,Image,Nursing view 2,/images/IINR/_KMP9240.JPG
 IINR Img 3,Image,Nursing view 3,/images/IINR/_KMP9127.JPG
 IINR Img 4,Image,Nursing view 4,/images/IINR/_KMP9222.JPG
 IINR Img 5,Image,Nursing view 5,/images/IINR/_KMP9008.jpg
-JMN Medical Video,Image,Primary banner for JMN Medical College,/images/JMN/_DSC2508.JPG
+JMN Medical Video,Video,Primary banner for JMN Medical College,https://jmnmedicalcollege.org.in/wp-content/uploads/2024/11/JMN-Video-2.mp4
 JMN Medical Img 2,Image,JMN Medical view 2,/images/JMN/_DSC2946.JPG
 JMN Medical Img 3,Image,JMN Medical view 3,/images/JMN/_DSC2935.JPG
 JMN Medical Img 4,Image,JMN Medical view 4,/images/JMN/_DSC2938.JPG

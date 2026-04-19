@@ -25,6 +25,7 @@
     "iihmahs": {
       "video": "",
       "images": [
+        null,
         "/images/IIHMAHS/_DSC6334.JPG",
         "/images/IIHMAHS/AMOF0045.JPG",
         "/images/IIHMAHS/_DSC6340.JPG",
@@ -36,6 +37,7 @@
     "iipsr": {
       "video": "",
       "images": [
+        null,
         "/images/IIPSR/_KMP9325.JPG",
         "/images/IIPSR/_KMP9409.JPG",
         "/images/IIPSR/_KMP9335.JPG",
@@ -49,8 +51,9 @@
       ]
     },
     "ichfn": {
-      "video": "/images/ICHFN/IMG_0663.JPG",
+      "video": "",
       "images": [
+        "/images/ICHFN/IMG_0663.JPG",
         "/images/ICHFN/IMG_0776.JPG",
         "/images/ICHFN/IMG_0799.JPG",
         "/images/ICHFN/IMG_0772.JPG",
@@ -63,6 +66,7 @@
     "iinr": {
       "video": "",
       "images": [
+        null,
         "/images/IINR/_KMP9006.JPG",
         "/images/IINR/_KMP9240.JPG",
         "/images/IINR/_KMP9127.JPG",
@@ -115,8 +119,9 @@
       ]
     },
     "jmn": {
-      "video": "/images/JMN/_DSC2508.JPG",
+      "video": "https://jmnmedicalcollege.org.in/wp-content/uploads/2024/11/JMN-Video-2.mp4",
       "images": [
+        null,
         null,
         "/images/JMN/_DSC2946.JPG",
         "/images/JMN/_DSC2935.JPG",
@@ -138,6 +143,7 @@
     "ccnr": {
       "video": "/images/CCNR/IMG_0442.JPG",
       "images": [
+        null,
         "/images/CCNR/IMG_0538.JPG",
         "/images/CCNR/IMG_0562.JPG",
         "/images/CCNR/IMG_0555.jpg",
@@ -154,6 +160,7 @@
     "kgh": {
       "video": "",
       "images": [
+        null,
         "/images/KGH/_MG_1244.JPG",
         "/images/KGH/_MG_1322.JPG",
         "/images/KGH/_MG_1275.JPG",
