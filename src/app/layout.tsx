@@ -39,7 +39,7 @@ export default function RootLayout({
       "addressRegion": "West Bengal",
       "addressCountry": "IN"
     },
-    "telephone": "+918000000000",
+    "telephone": "+919831050222",
     "email": "info@nirmalafoundation.co.in"
   };
 
@@ -149,6 +149,7 @@ export default function RootLayout({
             <div className="footerBrand">
               <h3>Nirmala Foundation</h3>
               <p>Registered charitable trust uplifting society through quality education across nursing, medicine, pharmacy, and management.</p>
+              <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.5)', marginTop: '1rem', fontSize: '0.9rem' }}>&ldquo;Care is not a service… It is a promise.&rdquo;</p>
             </div>
             <div className="footerCol">
               <h4>Quick Links</h4>

@@ -144,7 +144,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
               className={styles.heroTitle}
             >
-              Transforming Healthcare Education in Eastern India
+              We did not want to build buildings…<br/>We wanted to build a system that serves humanity.
             </motion.h1>
             <motion.div 
               initial={{ y: 30, opacity: 0 }}
@@ -210,7 +210,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              Established in 2017, Nirmala Foundation is a registered charitable trust founded to uplift society through quality education. In just a few years, it has grown into a comprehensive healthcare education ecosystem comprising 7 institutes and a 605-bed super specialty hospital across 6 campuses.
+              Nirmala Foundation is a purpose-driven organization committed to creating meaningful change where it matters most. Rooted in compassion and guided by action, the foundation works to uplift underserved communities through education, healthcare, and sustainable development.
             </motion.p>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
               <Link href="/about" className={styles.textLink}>Read Our Full Story →</Link>
@@ -366,7 +366,7 @@ export default function Home() {
       {/* 9. Bottom CTA */}
       <section className={styles.bottomCtaSection}>
         <div className={styles.bottomCtaContent}>
-           <h2>Your Healthcare Career Begins Here</h2>
+           <h2>The future is not something we wait for…<br/>It is something we build.</h2>
            <p>Applications are now open for the 2025–26 academic session across all our premier institutes.</p>
            <Link href="/apply" className={styles.ctaBannerBtn}>Apply Now</Link>
         </div>

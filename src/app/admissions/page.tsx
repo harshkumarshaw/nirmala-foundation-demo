@@ -14,6 +14,7 @@ export default function AdmissionsPage() {
         <div className={styles.heroContent}>
           <h1>Admissions 2026</h1>
           <p>Your journey towards a premium healthcare career starts here. Join nearly a thousand students across our 7 premier institutions.</p>
+          <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.6)', marginTop: '1rem', fontSize: '1rem' }}>&ldquo;Education here is not just knowledge… it is responsibility.&rdquo;</p>
           <Link href="/apply" className="btnPrimary" style={{ marginTop: '1.5rem', display: 'inline-block' }}>Apply Now →</Link>
         </div>
       </section>
