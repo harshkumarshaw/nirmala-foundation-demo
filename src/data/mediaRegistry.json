@@ -10,12 +10,7 @@
   },
   "hubs": {
     "admissions_hero": "/images/KGH/_MG_1173.JPG",
-    "contact_hero": "/images/KGH/_MG_1194.JPG",
-    "about_founder": "/images/JMN/_DSC2508.JPG",
-    "about_trustee1": "/images/IIHMAHS/AMOF0025.JPG",
-    "about_trustee2": "/images/IINR/_KMP9006.JPG",
-    "about_trustee3": "/images/IIPSR/_KMP9325.JPG",
-    "about_mou": "/images/German_Visit_IINR_1/German Visit_1.jpeg"
+    "contact_hero": "/images/KGH/_MG_1194.JPG"
   },
   "institutes": {
     "iihmahs": {
@@ -34,8 +29,7 @@
         "/images/IIPSR/_KMP9325.JPG",
         "/images/IIPSR/_KMP9409.JPG",
         "/images/IIPSR/_KMP9335.JPG",
-        "/images/IIPSR/_KMP9337.JPG",
-        "/images/IIPSR/_KMP9301.JPG"
+        "/images/IIPSR/_KMP9337.JPG"
       ]
     },
     "ichfn": {
@@ -44,8 +38,7 @@
         "/images/ICHFN/IMG_0786.JPG",
         "/images/ICHFN/IMG_0799.JPG",
         "/images/ICHFN/IMG_0772.JPG",
-        "/images/ICHFN/IMG_0776.JPG",
-        "/images/ICHFN/IMG_0663.JPG"
+        "/images/ICHFN/IMG_0776.JPG"
       ]
     },
     "iinr": {
@@ -55,8 +48,7 @@
         "/images/IINR/_KMP9240.JPG",
         "/images/IINR/_KMP9127.JPG",
         "/images/IINR/_KMP9222.JPG",
-        "/images/IINR/_KMP9008.jpg",
-        "/images/IINR/_DSC6348.JPG"
+        "/images/IINR/_KMP9008.jpg"
       ]
     },
     "jmn": {
@@ -66,8 +58,7 @@
         "/images/JMN/_DSC2946.JPG",
         "/images/JMN/_DSC2935.JPG",
         "/images/JMN/_DSC2938.JPG",
-        "/images/JMN/_DSC3010.JPG",
-        "/images/JMN/_DSC2508.JPG"
+        "/images/JMN/_DSC3010.JPG"
       ]
     },
     "ccnr": {
@@ -75,7 +66,6 @@
       "images": [
         "/images/CCNR/IMG_0538.JPG",
         "/images/CCNR/IMG_0562.JPG",
-        "/images/CCNR/IMG_0442.JPG",
         "/images/CCNR/IMG_0555.jpg"
       ]
     },
@@ -86,7 +76,6 @@
         "/images/KGH/_MG_1322.JPG",
         "/images/KGH/_MG_1275.JPG",
         "/images/KGH/_MG_1291.JPG",
-        "/images/KGH/_MG_1194.JPG",
         "/images/KGH/_MG_1351.JPG"
       ]
     }

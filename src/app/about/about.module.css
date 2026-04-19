@@ -61,14 +61,27 @@
 
 .imagePlaceholder {
   background: var(--accent-light);
-  color: var(--accent-hover);
+  background-image: url("https://images.unsplash.com/photo-1541339907198-e08756ebafe1?auto=format&fit=crop&w=1000&q=80");
+  background-size: cover;
+  background-position: center;
   height: 400px;
   border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
-  border: 1px dashed var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholderOverlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  padding: 2rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .grid3Col {
@@ -92,6 +105,16 @@
   background: var(--bg-main);
   border: 3px solid var(--accent-light);
   margin: 0 auto 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarPlaceholder span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
 }
 
 .card h3 {
